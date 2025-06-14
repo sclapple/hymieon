@@ -1,4 +1,4 @@
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && yay -S --needed --noconfirm gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman \
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ~ && git clone https://github.com/javalsai/lidm.git && cd lidm && make && make install-service-systemd && cd ~ && yay -S --needed --noconfirm gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman \
 	java-environment-common java-runtime-common jdk17-openjdk jq jre-openjdk \
        	jre8-openjdk jre8-openjdk-headless adwsteamgtk appimagelauncher mangohud \
        	goverlay steam wine-staging winetricks gamemode lib32-gamemode giflib lib32-giflib \
@@ -11,5 +11,5 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
        	vulkan-icd-loader lib32-vulkan-icd-loader obs-studio discord mangohud lib32-mangohud \
        	goverlay gamescope solaar bluez bluez-utils lib32-libpulse pipewire pipewire-pulse \
        	pipewire-alsa linux-headers xwaylandvideobridge protonplus polkit-gnome gnome-disk-utility \
-	timeshift xorg-xhost uwsm  nvidia nvidia-utils lib32-nvidia-utils nvidia-settings \
-       	opencl-nvidia pamac-all networkmanager greetd nwg-hello egl-wayland && sudo usermod -aG gamemode izaiaha && sudo systemctl enable fstrim.timer && sudo systemctl enable NetworkManager && sudo systemctl enable greetd.service && sh <(curl -L https://raw.githubusercontent.com/JaKooLit/Arch-Hyprland/main/auto-install.sh)
+	timeshift xorg-xhost uwsm mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader \
+       	pamac-all networkmanager lidm && sudo usermod -aG gamemode damieon && sudo systemctl enable fstrim.timer && sudo systemctl enable NetworkManager && sudo systemctl enable lidm.service && sh <(curl -L https://raw.githubusercontent.com/JaKooLit/Arch-Hyprland/main/auto-install.sh)
