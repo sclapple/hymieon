@@ -1,4 +1,4 @@
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ~ && git clone https://github.com/javalsai/lidm.git && cd lidm && make && make install-service-systemd && cd ~ && yay -S --needed --noconfirm gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman \
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ~ && git clone https://github.com/javalsai/lidm.git && cd lidm && sudo make && sudo make install-service-systemd && cd ~ && yay -S --needed --noconfirm gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman \
 	java-environment-common java-runtime-common jdk17-openjdk jq jre-openjdk \
        	jre8-openjdk jre8-openjdk-headless adwsteamgtk appimagelauncher mangohud \
        	goverlay steam wine-staging winetricks gamemode lib32-gamemode giflib lib32-giflib \
