@@ -11,5 +11,5 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
        	vulkan-icd-loader lib32-vulkan-icd-loader obs-studio discord mangohud lib32-mangohud \
        	goverlay gamescope solaar bluez bluez-utils lib32-libpulse pipewire pipewire-pulse \
        	pipewire-alsa linux-headers xwaylandvideobridge protonplus polkit-gnome gnome-disk-utility \
-	timeshift xorg-xhost uwsm \
+	timeshift xorg-xhost uwsm fzf fastanime mpv fish \
        	pamac-all networkmanager lidm && sudo usermod -aG gamemode damieon && sudo systemctl enable fstrim.timer && sudo systemctl enable NetworkManager && sudo systemctl enable lidm.service && sh <(curl -L https://raw.githubusercontent.com/JaKooLit/Arch-Hyprland/main/auto-install.sh)
