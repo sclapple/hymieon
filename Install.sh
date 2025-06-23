@@ -11,7 +11,7 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
        	vulkan-icd-loader lib32-vulkan-icd-loader obs-studio discord mangohud lib32-mangohud \
        	gamescope solaar bluez bluez-utils lib32-libpulse pipewire pipewire-pulse wallust \
        	pipewire-alsa linux-headers xwaylandvideobridge protonplus polkit-gnome gnome-disk-utility \
-	timeshift xorg-xhost uwsm fzf fastanime mpv fish fisher polychromatic openrazer-daemon opentabletdriver cosu-trainer-bin \
+	xorg-xhost grub-btrfs timeshift timeshift-autosnap uwsm fzf fastanime mpv fish fisher polychromatic openrazer-daemon opentabletdriver cosu-trainer-bin \
  	mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader lact \ 
   	aic94xx-firmware ast-firmware linux-firmware-qlogic linux-firmware-bnx2x linux-firmware-liquidio \
    	linux-firmware-mellanox linux-firmware-nfp wd719x-firmware upd72020x-fw cava firefox lm_sensors coolercontrol \
