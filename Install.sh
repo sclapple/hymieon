@@ -9,10 +9,10 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
        	ncurses lib32-ncurses opencl-icd-loader lib32-opencl-icd-loader libxslt lib32-libxslt \
        	libva lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs \
        	vulkan-icd-loader lib32-vulkan-icd-loader obs-studio discord mangohud lib32-mangohud \
-       	gamescope solaar bluez bluez-utils lib32-libpulse pipewire pipewire-pulse \
+       	gamescope solaar bluez bluez-utils lib32-libpulse pipewire pipewire-pulse wallust \
        	pipewire-alsa linux-headers xwaylandvideobridge protonplus polkit-gnome gnome-disk-utility \
 	timeshift xorg-xhost uwsm fzf fastanime mpv fish fisher polychromatic openrazer-daemon opentabletdriver cosu-trainer-bin \
  	mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader lact \ 
   	aic94xx-firmware ast-firmware linux-firmware-qlogic linux-firmware-bnx2x linux-firmware-liquidio \
-   	linux-firmware-mellanox linux-firmware-nfp wd719x-firmware upd72020x-fw cava firefox \
+   	linux-firmware-mellanox linux-firmware-nfp wd719x-firmware upd72020x-fw cava firefox lm_sensors coolercontrol \
        	pamac-all networkmanager lidm && sudo usermod -aG gamemode damieon && sudo systemctl enable fstrim.timer && sudo systemctl enable NetworkManager.service && sudo systemctl enable lidm.service && sudo modprobe razermouse && sudo gpasswd -a $USER plugdev && sudo systemctl enable --now lactd && echo /usr/bin/fish | sudo tee -a /etc/shells && chsh -s /usr/bin/fish && sh <(curl -L https://raw.githubusercontent.com/JaKooLit/Arch-Hyprland/main/auto-install.sh)
