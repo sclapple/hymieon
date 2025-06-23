@@ -9,7 +9,7 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
        	libva lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs \
        	vulkan-icd-loader lib32-vulkan-icd-loader discord solaar bluez bluez-utils lib32-libpulse pipewire pipewire-pulse \
        	pipewire-alsa linux-headers xwaylandvideobridge polkit-gnome gnome-disk-utility \
-	timeshift xorg-xhost uwsm fzf fastanime mpv fish fisher wallust \
+	xorg-xhost grub-btrfs timeshift timeshift-autosnap uwsm fzf fastanime mpv fish fisher wallust \
  	aic94xx-firmware ast-firmware linux-firmware-qlogic linux-firmware-bnx2x linux-firmware-liquidio \
    	linux-firmware-mellanox linux-firmware-nfp wd719x-firmware upd72020x-fw cava firefox \
        	pamac-all networkmanager lidm && sudo systemctl enable fstrim.timer && sudo systemctl enable NetworkManager.service && sudo systemctl enable lidm.service && echo /usr/bin/fish | sudo tee -a /etc/shells && chsh -s /usr/bin/fish && sh <(curl -L https://raw.githubusercontent.com/JaKooLit/Arch-Hyprland/main/auto-install.sh)
