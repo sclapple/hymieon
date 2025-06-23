@@ -12,4 +12,4 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 	timeshift xorg-xhost uwsm fzf fastanime mpv fish fisher \
  	aic94xx-firmware ast-firmware linux-firmware-qlogic linux-firmware-bnx2x linux-firmware-liquidio \
    	linux-firmware-mellanox linux-firmware-nfp wd719x-firmware upd72020x-fw \
-       	pamac-all networkmanager lidm && sudo usermod -aG gamemode damieon && sudo systemctl enable fstrim.timer && sudo systemctl enable NetworkManager && sudo systemctl enable lidm.service && sh <(curl -L https://raw.githubusercontent.com/JaKooLit/Arch-Hyprland/main/auto-install.sh)
+       	pamac-all networkmanager lidm && sudo systemctl enable fstrim.timer && sudo systemctl enable NetworkManager.service && sudo systemctl enable lidm.service && sh <(curl -L https://raw.githubusercontent.com/JaKooLit/Arch-Hyprland/main/auto-install.sh)
