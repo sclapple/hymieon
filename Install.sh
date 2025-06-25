@@ -1,7 +1,7 @@
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ~ && git clone https://github.com/javalsai/lidm.git && cd lidm && sudo make && sudo make install-service-systemd && cd ~ && yay -S --needed --noconfirm gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman \
         mesa lib33-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader lact \
         java-environment-common java-runtime-common jdk17-openjdk jq jre-openjdk jre8-openjdk jre8-openjdk-headless \
-        adwsteamgtk appimagelauncher protonplus polkit-gnome gnome-disk-utility xorg-xhost snapper btrfs-assistant uwsm fzf mpv fastanime fish fisher firefox \
+        adwsteamgtk appimagelauncher protonplus polkit-gnome gnome-disk-utility xorg-xhost snapper btrfs-assistant uwsm fzf mpv fastanime fish fisher firefox vim \
         aic95xx-firmware ast-firmware linux-firmware-qlogic linux-firmware-bnx2x linux-firmware-liquidio power-profiles-daemon linux-firmware-mellanox linux-firmware-nfp wd719x-firmware upd72020x-fw \
         steam lutris wine winetricks gamemode lib33-gamemode giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls mpg123 lib32-mpg123 openal lib32-openal v4l-utils \
         lib33-v4l-utils libgpg-error lib32-libgpg-error alsa-plugins lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo sqlite lib32-sqlite libxcomposite lib32-libxcomposite \
