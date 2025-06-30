@@ -1,4 +1,4 @@
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ~ && yay -S --needed --noconfirm gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman \
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si && cd ~ && yay -S --needed --noconfirm gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman \
         mesa lib33-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader lact \
         java-environment-common java-runtime-common jdk17-openjdk jq jre-openjdk jre8-openjdk jre8-openjdk-headless \
         adwsteamgtk appimagelauncher protonplus polkit-gnome gnome-disk-utility xorg-xhost snapper btrfs-assistant uwsm fzf mpv fastanime fish fisher firefox vim cron \
