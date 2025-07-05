@@ -12,4 +12,4 @@ sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/ya
 	xorg-xhost grub-btrfs timeshift timeshift-autosnap uwsm fzf fastanime mpv fish fisher wallust \
  	aic94xx-firmware ast-firmware linux-firmware-qlogic linux-firmware-bnx2x linux-firmware-liquidio \
    	linux-firmware-mellanox linux-firmware-nfp wd719x-firmware upd72020x-fw cava firefox \
-       	pamac-all networkmanager lidm && sudo systemctl enable fstrim.timer && sudo systemctl enable NetworkManager.service && sudo systemctl enable lidm.service && echo /usr/bin/fish | sudo tee -a /etc/shells && chsh -s /usr/bin/fish && sh <(curl -L https://raw.githubusercontent.com/JaKooLit/Arch-Hyprland/main/auto-install.sh)
+       	pamac-all networkmanager lidm && sudo systemctl enable fstrim.timer && sudo systemctl enable NetworkManager.service && sudo systemctl enable lidm.service && echo /usr/bin/fish | sudo tee -a /etc/shells && chsh -s /usr/bin/fish
