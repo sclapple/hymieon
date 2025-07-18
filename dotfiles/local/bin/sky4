@@ -1,0 +1,1 @@
+cd /mnt/LinuxGames/MinecraftServers/SkyFactory4/ && sleep 3 && ./ServerStart.sh
