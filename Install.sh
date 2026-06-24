@@ -20,25 +20,83 @@ git clone https://aur.archlinux.org/paru.git /tmp/paru
 (cd /tmp/paru && makepkg -si --noconfirm)
 rm -rf /tmp/paru
 
+echo ":: GPU drivers..."
+echo "1) AMD"
+echo "2) NVIDIA"
+echo "0) Skip"
+read -rp "Select GPU drivers: " choice
+case "$choice" in
+    1)
+        paru -S --noconfirm mesa vulkan-radeon
+        ;;
+    2)
+        paru -S --noconfirm nvidia nvidia-settings opencl-nvidia
+        ;;
+esac
+
 echo ":: Installing packages..."
 paru -S --needed --noconfirm \
-    gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman \
-    mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader lact \
-    java-environment-common java-runtime-common jdk17-openjdk jre-openjdk jre8-openjdk jre8-openjdk-headless \
-    jq adwsteamgtk appimagelauncher protonplus polkit-gnome gnome-disk-utility xorg-xhost snapper btrfs-assistant \
-    uwsm fzf mpv fastanime fish fisher firefox nvim cron hyprfreeze-git hyprpicker \
-    aic94xx-firmware ast-firmware linux-firmware-qlogic linux-firmware-bnx2x linux-firmware-liquidio \
-    power-profiles-daemon linux-firmware-mellanox linux-firmware-nfp wd719x-firmware upd72020x-fw \
-    steam lutris wine winetricks gamemode lib32-gamemode \
-    giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls mpg123 lib32-mpg123 \
-    openal lib32-openal v4l-utils lib32-v4l-utils libgpg-error lib32-libgpg-error alsa-plugins lib32-alsa-plugins \
-    alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo sqlite lib32-sqlite libxcomposite lib32-libxcomposite \
-    libxinerama lib32-libxinerama ncurses lib32-ncurses opencl-icd-loader lib32-opencl-icd-loader libxslt lib32-libxslt \
-    libva lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs \
-    obs-studio mangohud lib32-mangohud goverlay gamescope \
-    bluez bluez-utils lib32-libpulse pipewire pipewire-pulse pipewire-alsa linux-headers xwaylandvideobridge \
-    transmission-gtk mpd mpc rmpc ttf-iosevka-nerd hyprsunset vesktop inotify-tools less \
-    pamac-all networkmanager krabby-bin
+    base base-devel linux linux-headers amd-ucode \
+    hyprland hyprcursor hyprshutdown hyprpwcenter xdg-desktop-portal-hyprland \
+    efibootmgr zram-generator networkmanager \
+    cronie git openssh greetd power-profiles-daemon \
+    grim cliphist wtype wl-clip-persist \
+    gamescope mangohud gamemode \
+    brightnessctl ddcutil goverlay \
+    pipewire \
+    fish kitty tmux starship fzf \
+    bat fd ripgrep jq yazi \
+    nano less fastfetch fisher \
+    neovim opencode \
+    jre8-openjdk \
+    chromium nautilus firefox \
+    steam lutris wine \
+    prismlauncher cosu-trainer \
+    audacity obs-studio kdenlive \
+    mpv \
+    loupe imagemagick \
+    noto-fonts noto-fonts-cjk noto-fonts-emoji \
+    ttf-jetbrains-mono-nerd ttf-noto-nerd \
+    papirus-icon-theme \
+    nwg-displays nwg-look qt5ct-kde qt6ct-kde \
+    btrfs-assistant resources bleachbit file-roller \
+    cameractrls network-manager-applet \
+    cage pacman-contrib rbw selectdefaultapplication-git \
+    expac \
+    xdotool xorg-xwininfo \
+    sof-firmware upd72020x-fw v4l2loopback-dkms v4l-utils \
+    ntfs-3g \
+    samba sshfs \
+    rsync wget socat ethtool \
+    7zip \
+    adw-gtk-theme-git appmanager bibata-cursor-theme \
+    coolercontrol hyprshade keyguard \
+    lsfg-vk noctalia-git \
+    proton-ge-custom-bin scopebuddy spotify vesktop \
+    vkbasalt zen-browser-bin
+
+echo ":: Optional extras..."
+read -rp "Install Jellyfin things? (jellyfin-tui, feishin, jellyfin-mpv-shim) [y/N] " answer
+case "${answer,,}" in
+    y|yes)
+        paru -S --noconfirm feishin jellyfin-mpv-shim jellyfin-tui
+        ;;
+esac
+
+GAMING_EXTRAS=false
+read -rp "Install gaming extras? (deadlock-modmanager-bin, hedgemodmanager-git, opentabletdriver, osu-lazer-bin, rewind-bin, unleashedrecomp-bin, upscayl) [y/N] " answer
+case "${answer,,}" in
+    y|yes)
+        GAMING_EXTRAS=true
+        paru -S --noconfirm deadlock-modmanager-bin hedgemodmanager-git opentabletdriver osu-lazer-bin rewind-bin unleashedrecomp-bin upscayl
+        echo ":: Applying audio latency tuning..."
+        sudo tee /etc/security/limits.d/99-audio.conf > /dev/null <<'EOF'
+@audio   -   rtprio   95
+@audio   -   memlock  unlimited
+EOF
+        sudo usermod -aG audio "$USER_NAME"
+        ;;
+esac
 
 echo ":: Copying configuration files..."
 sudo cp -r "$SCRIPT_DIR/etc/." /etc/
@@ -51,16 +109,20 @@ grep -rl "__HOME__" "$USER_HOME" 2>/dev/null | while read -r f; do
     sed -i "s|__HOME__|$USER_HOME|g" "$f"
 done
 
+if [ "$GAMING_EXTRAS" != true ]; then
+    echo ":: Skipping pipewire/wireplumber configs (no gaming extras)..."
+    rm -rf "$USER_HOME/.config/pipewire" "$USER_HOME/.config/wireplumber"
+fi
+
 echo ":: Enabling services..."
-systemctl --user enable --now mpd-mpris 2>/dev/null || true
-systemctl --user enable --now mpd 2>/dev/null || true
 sudo usermod -aG gamemode "$USER_NAME" 2>/dev/null || true
 sudo systemctl enable fstrim.timer 2>/dev/null || true
 sudo systemctl enable NetworkManager.service 2>/dev/null || true
 sudo systemctl enable bluetooth.service 2>/dev/null || true
 sudo systemctl enable cronie.service 2>/dev/null || true
+sudo systemctl enable greetd.service 2>/dev/null || true
+sudo systemctl enable --now coolercontrold 2>/dev/null || true
 sudo gpasswd -a "$USER_NAME" plugdev 2>/dev/null || true
-sudo systemctl enable --now lactd 2>/dev/null || true
 
 echo ":: Setting default shell to fish..."
 echo /usr/bin/fish | sudo tee -a /etc/shells > /dev/null
