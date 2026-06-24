@@ -1,0 +1,48 @@
+[bar.default]
+capsule = true
+center = [ "group:g1" ]
+end = [ "group:g3" ]
+font_weight = 700
+margin_edge = 0.0
+margin_ends = 0.0
+background_opacity = 0.8
+radius = 0
+start = [ "group:g2" ]
+
+[[bar.default.capsule_group]]
+fill = "surface_variant"
+id = "g1"
+members = [ "weather", "clock", "notifications" ]
+opacity = 1.0
+padding = 6.0
+
+[[bar.default.capsule_group]]
+fill = "surface_variant"
+id = "g2"
+members = [ "launcher", "wallpaper", "workspaces", "media" ]
+opacity = 1.0
+padding = 6.0
+
+[[bar.default.capsule_group]]
+fill = "surface_variant"
+id = "g3"
+members = [ "tray", "bluetooth", "volume", "brightness" ]
+opacity = 1.0
+padding = 6.0
+
+[widget.clock]
+format = "{:%-I:%M %p}"
+
+[widget.media]
+max_length = 200
+title_scroll = "on_hover"
+
+[widget.notifications]
+hide_when_no_unread = true
+
+[widget.tray]
+drawer = true
+
+[widget.weather]
+show_condition = false
+

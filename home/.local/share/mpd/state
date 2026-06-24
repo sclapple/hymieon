@@ -1,0 +1,660 @@
+sw_volume: 38
+audio_device_state:1:PipeWire Sound Server
+audio_device_state:1:my_fifo
+state: pause
+current: 197
+time: 96.70100000000001
+random: 1
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0
+mixrampdelay: -1
+lastloadedplaylist: EmoShi
+playlist_begin
+0:EmoShi/A Lot Like Birds - Orange Time Machines Care.mp3
+1:EmoShi/A Lot Like Birds - Properties of Friction.mp3
+2:EmoShi/A Lot Like Birds - Sesame Street Is No Place for Me.mp3
+3:EmoShi/A Lot Like Birds - Tantrum (Far from the Tree, The Apple Grew Rotten).mp3
+4:EmoShi/A Lot Like Birds - The Blowtorch Is Applied to the Sugar.mp3
+5:EmoShi/A Lot Like Birds - Think Dirty out Loud.mp3
+6:EmoShi/A Lot Like Birds - Truly Random Code.mp3
+7:EmoShi/A Lot Like Birds - Vanity's Fair.mp3
+8:EmoShi/A Lot Like Birds - What Didn't Kill Me Just Got Stronger.mp3
+9:EmoShi/A Lot Like Birds - Connector.mp3
+10:EmoShi/A Lot Like Birds - Kuroi Ledge.mp3
+11:EmoShi/A Lot Like Birds - Next to Ungodliness.mp3
+12:EmoShi/A Lot Like Birds - No Nature.mp3
+13:EmoShi/A Lot Like Birds - Recluse.mp3
+14:EmoShi/A Lot Like Birds - Shaking of the Frame.mp3
+15:EmoShi/Adventurer - Nova Chrono.mp3
+16:EmoShi/Adventurer - Snow Day.mp3
+17:EmoShi/Adventurer - House.mp3
+18:EmoShi/Adventurer - Living With a Ghost.mp3
+19:EmoShi/Adventurer - Two Wrongs Don't Make a Wife.mp3
+20:EmoShi/Adventurer - Angel Island.mp3
+21:EmoShi/Adventurer - Solstice.mp3
+22:EmoShi/Adventurer - Telepathy Club.mp3
+23:EmoShi/Adventurer - This Is Not for You.mp3
+24:EmoShi/Adventurer - Two Tides.mp3
+25:EmoShi/Adventurer - Vicious Circle.mp3
+26:EmoShi/Adventurer - Voices over Infinite Distance.mp3
+27:EmoShi/Adventurer, Andy Cizek, Cristina Pena - Afterlife.mp3
+28:EmoShi/Adventurer - Broke.mp3
+29:EmoShi/Adventurer - Cold Blooded.mp3
+30:EmoShi/Adventurer - Don’t Forget About Me.mp3
+31:EmoShi/Adventurer - Galaxy God.mp3
+32:EmoShi/Adventurer - Oil Ocean.mp3
+33:EmoShi/Adventurer - Turning Back The Clock.mp3
+34:EmoShi/Adventurer - Watermelon & Rum.mp3
+35:EmoShi/Adventurer - Wolf Dr..mp3
+36:EmoShi/Adventurer - I Never Went To College (And Neither Did You).mp3
+37:EmoShi/Amarionette, Kurt Travis - Compromise.mp3
+38:EmoShi/AnimalJam - Seashell.mp3
+39:EmoShi/AnimalJam - Vent.mp3
+40:EmoShi/AnimalJam - Anhedonia.mp3
+41:EmoShi/AnimalJam - Duke Baron of Mahps.mp3
+42:EmoShi/AnimalJam - Feelosophizin'.mp3
+43:EmoShi/AnimalJam - Pm Ny Wadi.mp3
+44:EmoShi/AnimalJam - Sertraline.mp3
+45:EmoShi/AnimalJam - Terrorantula.mp3
+46:EmoShi/AnimalJam - Desolation (New Years Day).mp3
+47:EmoShi/AnimalJam - Repudiation (New Years Eve).mp3
+48:EmoShi/AnimalJam - Resolution (January 3rd).mp3
+49:EmoShi/AnimalJam - Transcendence (January 2nd).mp3
+50:EmoShi/Cat Company - Firestarter.mp3
+51:EmoShi/Cat Company - Kusanagi.mp3
+52:EmoShi/Cat Company - Maroon Sweater.mp3
+53:EmoShi/Cat Company - Morpheus the Black.mp3
+54:EmoShi/Cat Company - Sad Dance.mp3
+55:EmoShi/Cat Company - Cutie Carousel.mp3
+56:EmoShi/Circa Survive - Compendium.mp3
+57:EmoShi/Circa Survive - Frozen Creek.mp3
+58:EmoShi/Circa Survive - Get Out.mp3
+59:EmoShi/Circa Survive - Glass Arrows.mp3
+60:EmoShi/Circa Survive - Imaginary Enemy.mp3
+61:EmoShi/Circa Survive - The Longest Mile.mp3
+62:EmoShi/Circa Survive - Phantom.mp3
+63:EmoShi/Circa Survive - Always Begin.mp3
+64:EmoShi/Circa Survive - Child of the Desert.mp3
+65:EmoShi/Circa Survive - Descensus.mp3
+66:EmoShi/Circa Survive - Nesting Dolls.mp3
+67:EmoShi/Circa Survive - Only The Sun.mp3
+68:EmoShi/Circa Survive - Quiet Down.mp3
+69:EmoShi/Circa Survive - Schema.mp3
+70:EmoShi/Circa Survive - Sovereign Circle.mp3
+71:EmoShi/Circa Survive - Who Will Lie With Me Now.mp3
+72:EmoShi/Circa Survive - Act Appalled.mp3
+73:EmoShi/Circa Survive - Always Getting What You Want.mp3
+74:EmoShi/Circa Survive - Holding Someone's Hair Back.mp3
+75:EmoShi/Circa Survive - House of Leaves.mp3
+76:EmoShi/Circa Survive - In Fear and Faith.mp3
+77:EmoShi/Circa Survive - Meet Me in Montauk.mp3
+78:EmoShi/Circa Survive - Oh. Hello.mp3
+79:EmoShi/Circa Survive - Stop the Fuking Car.mp3
+80:EmoShi/Circa Survive - The Glorious Nosebleed.mp3
+81:EmoShi/Circa Survive - The Great Golden Baby.mp3
+82:EmoShi/Circa Survive - We're All Thieves.mp3
+83:EmoShi/Circa Survive - Wish Resign.mp3
+84:EmoShi/Circa Survive - Stop the Fucking Car.mp3
+85:EmoShi/Circa Survive - Carry Us Away.mp3
+86:EmoShi/Circa Survive - Close Your Eyes To See.mp3
+87:EmoShi/Circa Survive - In The Morning And Amazing....mp3
+88:EmoShi/Circa Survive - Kicking Your Crosses Down.mp3
+89:EmoShi/Circa Survive - Living Together.mp3
+90:EmoShi/Circa Survive - Mandala.mp3
+91:EmoShi/Circa Survive - On Letting Go.mp3
+92:EmoShi/Circa Survive - Semi Constructive Criticism.mp3
+93:EmoShi/Circa Survive - The Difference Between Medicine And Poison Is In The Dose.mp3
+94:EmoShi/Circa Survive - The Greatest Lie.mp3
+95:EmoShi/Circa Survive - Travel Hymn.mp3
+96:EmoShi/Circa Survive - Your Friends Are Gone.mp3
+97:EmoShi/Circa Survive - At Night It Gets Worse.mp3
+98:EmoShi/Circa Survive - Dark Pools.mp3
+99:EmoShi/Circa Survive - Flesh and Bone.mp3
+100:EmoShi/Circa Survive - Indra's Net.mp3
+101:EmoShi/Circa Survive - Lustration.mp3
+102:EmoShi/Circa Survive - Never Tell A Soul.mp3
+103:EmoShi/Circa Survive - Premonition of the Hex.mp3
+104:EmoShi/Circa Survive - Rites of Investiture.mp3
+105:EmoShi/Circa Survive - Stay.mp3
+106:EmoShi/Circa Survive - The Amulet.mp3
+107:EmoShi/Circa Survive - The Hex.mp3
+108:EmoShi/Circa Survive - Tunnel Vision.mp3
+109:EmoShi/Dance Gavin Dance - Acceptance Speech.mp3
+110:EmoShi/Dance Gavin Dance - Carve.mp3
+111:EmoShi/Dance Gavin Dance - Death of the Robot with Human Hair.mp3
+112:EmoShi/Dance Gavin Dance - Doom & Gloom.mp3
+113:EmoShi/Dance Gavin Dance - Honey Revenge.mp3
+114:EmoShi/Dance Gavin Dance - Jesus H. Macy.mp3
+115:EmoShi/Dance Gavin Dance - Strawberry Swisher pt. 3.mp3
+116:EmoShi/Dance Gavin Dance - The Jiggler.mp3
+117:EmoShi/Dance Gavin Dance - The Robot with Human Hair pt. 4.mp3
+118:EmoShi/Dance Gavin Dance - Turn Off the Lights. I'm Watching Back to the Future pt. II.mp3
+119:EmoShi/Dance Gavin Dance - Strawberry’s Wake.mp3
+120:EmoShi/Dance Gavin Dance, Andrew Wells - Nothing Shameful (feat. Andrew Wells).mp3
+121:EmoShi/Dance Gavin Dance - Bloodsucker.mp3
+122:EmoShi/Dance Gavin Dance - Care.mp3
+123:EmoShi/Dance Gavin Dance - Count Bassy.mp3
+124:EmoShi/Dance Gavin Dance - Flash.mp3
+125:EmoShi/Dance Gavin Dance - Gospel Burnout.mp3
+126:EmoShi/Dance Gavin Dance - Hair Song.mp3
+127:EmoShi/Dance Gavin Dance - Midnight Crusade.mp3
+128:EmoShi/Dance Gavin Dance - Shelf Life.mp3
+129:EmoShi/Dance Gavin Dance - Slouch.mp3
+130:EmoShi/Dance Gavin Dance - Son of Robot.mp3
+131:EmoShi/Dance Gavin Dance - Story Of My Bros.mp3
+132:EmoShi/Dance Gavin Dance - Suspended In This Disaster.mp3
+133:EmoShi/Dance Gavin Dance - Burning Down The Nicotine Armoire, Pt. 2.mp3
+134:EmoShi/Dance Gavin Dance - Hot Water On Wool (Reprise).mp3
+135:EmoShi/Dance Gavin Dance - Hot Water On Wool.mp3
+136:EmoShi/Dance Gavin Dance - Me And Zoloft Get Along Just Fine.mp3
+137:EmoShi/Dance Gavin Dance - Reprogramming Mental Preprogramming.mp3
+138:EmoShi/Dance Gavin Dance - Rock Solid.mp3
+139:EmoShi/Dance Gavin Dance - Skyhook.mp3
+140:EmoShi/Dance Gavin Dance - The Robot With Human Hair, Pt. 3.mp3
+141:EmoShi/Dance Gavin Dance - Uneasy Hearts Weigh The Most.mp3
+142:EmoShi/Dance Gavin Dance, Chino Moreno - Caviar (feat. Chino Moreno).mp3
+143:EmoShi/Dance Gavin Dance - And I Told Them I Invented Times New Roman.mp3
+144:EmoShi/Dance Gavin Dance - Antlion.mp3
+145:EmoShi/Dance Gavin Dance - It's Safe To Say You Dig The Backseat.mp3
+146:EmoShi/Dance Gavin Dance - Lemon Meringue Tie.mp3
+147:EmoShi/Dance Gavin Dance - Open Your Eyes And Look North.mp3
+148:EmoShi/Dance Gavin Dance - Strawberry Andre.mp3
+149:EmoShi/Dance Gavin Dance - Surprise! I'm From Cuba, Everyone Has One Brain.mp3
+150:EmoShi/Dance Gavin Dance - The Backwards Pumpkin Song.mp3
+151:EmoShi/Dance Gavin Dance - Turn Off The Lights, I'm Watching Back To The Future.mp3
+152:EmoShi/Dance Gavin Dance - Blue Dream.mp3
+153:EmoShi/Dance Gavin Dance - Heat Seeking Ghost of Sex.mp3
+154:EmoShi/Dance Gavin Dance - Need Money.mp3
+155:EmoShi/Dance Gavin Dance - People You Knew.mp3
+156:EmoShi/Dance Gavin Dance - Perfect.mp3
+157:EmoShi/Dance Gavin Dance - Pounce Bounce.mp3
+158:EmoShi/Dance Gavin Dance - Privilously Poncheezied.mp3
+159:EmoShi/Dance Gavin Dance - Purple Reign.mp3
+160:EmoShi/Dance Gavin Dance - Spooks.mp3
+161:EmoShi/Dance Gavin Dance - Swan Soup.mp3
+162:EmoShi/Dance Gavin Dance - The Robot With Human Hair, Pt. 2 12.mp3
+163:EmoShi/Dance Gavin Dance - Thug City.mp3
+164:EmoShi/Dance Gavin Dance - Self-Trepanation.mp3
+165:EmoShi/Dance Gavin Dance - Carl Barker.mp3
+166:EmoShi/Dance Gavin Dance - Don't Tell Dave.mp3
+167:EmoShi/Dance Gavin Dance - Happiness.mp3
+168:EmoShi/Dance Gavin Dance - I'm Down With Brown Town.mp3
+169:EmoShi/Dance Gavin Dance - NASA.mp3
+170:EmoShi/Dance Gavin Dance - Strawberry Swisher, Pt. 2.mp3
+171:EmoShi/Dance Gavin Dance - Tree Village.mp3
+172:EmoShi/Dance Gavin Dance - Head Hunter.mp3
+173:EmoShi/Dance Gavin Dance - Awkward.mp3
+174:EmoShi/Dance Gavin Dance - Death of a Strawberry.mp3
+175:EmoShi/Dance Gavin Dance - Eagle vs. Crows.mp3
+176:EmoShi/Dance Gavin Dance - Legend.mp3
+177:EmoShi/Dance Gavin Dance - Lost.mp3
+178:EmoShi/Dance Gavin Dance - On The Run.mp3
+179:EmoShi/Dance Gavin Dance - Shark Dad.mp3
+180:EmoShi/Dance Gavin Dance - Something New.mp3
+181:EmoShi/Dance Gavin Dance - Stroke God, Millionaire.mp3
+182:EmoShi/Dance Gavin Dance - The Cuddler.mp3
+183:EmoShi/Dance Gavin Dance - Variation.mp3
+184:EmoShi/Dance Gavin Dance - We Own the Night.mp3
+185:EmoShi/Dance Gavin Dance - Cream Of The Crop.mp3
+186:EmoShi/Dance Gavin Dance - Die Another Day.mp3
+187:EmoShi/Dance Gavin Dance - Ember.mp3
+188:EmoShi/Dance Gavin Dance - Feels Bad Man.mp3
+189:EmoShi/Dance Gavin Dance - For The Jeers.mp3
+190:EmoShi/Dance Gavin Dance - Holy Ghost Spirit.mp3
+191:EmoShi/Dance Gavin Dance - One Man's Cringe.mp3
+192:EmoShi/Dance Gavin Dance - Pop Off!.mp3
+193:EmoShi/Dance Gavin Dance, Rob Damiani - Synergy - feat. Rob Damiani.mp3
+194:EmoShi/Dance Gavin Dance - Betrayed By The Game.mp3
+195:EmoShi/Dance Gavin Dance - Chocolate Jackalope.mp3
+196:EmoShi/Dance Gavin Dance - Chucky vs. The Giant Tortoise.mp3
+197:EmoShi/Dance Gavin Dance - Deception.mp3
+198:EmoShi/Dance Gavin Dance - Exposed.mp3
+199:EmoShi/Dance Gavin Dance - Frozen One.mp3
+200:EmoShi/Dance Gavin Dance - Here Comes The Winner.mp3
+201:EmoShi/Dance Gavin Dance - Inspire The Liars.mp3
+202:EmoShi/Dance Gavin Dance - Man Of The Year.mp3
+203:EmoShi/Dance Gavin Dance - Petting Zoo Justice.mp3
+204:EmoShi/Dance Gavin Dance - Philosopher King.mp3
+205:EmoShi/Dance Gavin Dance - Speed Demon.mp3
+206:EmoShi/Dance Gavin Dance - Straight From The Heart.mp3
+207:EmoShi/Dance Gavin Dance - Summertime Gladness.mp3
+208:EmoShi/Dance Gavin Dance - Burning Down The Nicotine Armoire.mp3
+209:EmoShi/Dance Gavin Dance - The Robot With Human Hair pt. 1.mp3
+210:EmoShi/Deftones - 7 Words.mp3
+211:EmoShi/Deftones - Birthmark.mp3
+212:EmoShi/Deftones - Bored.mp3
+213:EmoShi/Deftones - Fireal.mp3
+214:EmoShi/Deftones - Nosebleed.mp3
+215:EmoShi/Deftones - One Weak.mp3
+216:EmoShi/Deftones - Root.mp3
+217:EmoShi/Deftones - Around the Fur.mp3
+218:EmoShi/Deftones - Headup.mp3
+219:EmoShi/Deftones - Lhabia.mp3
+220:EmoShi/Deftones - Lotion.mp3
+221:EmoShi/Deftones - Mascara.mp3
+222:EmoShi/Deftones - My Own Summer (Shove It).mp3
+223:EmoShi/Deftones - Dai the Flu.mp3
+224:EmoShi/Deftones - Rickets.mp3
+225:EmoShi/Deftones - Be Quiet and Drive (Far Away).mp3
+226:EmoShi/Deftones - Please Please Please Let Me Get What I Want - 2005 Remaster.mp3
+227:EmoShi/Deftones - Bloody Cape.mp3
+228:EmoShi/Deftones - Deathblow.mp3
+229:EmoShi/Deftones - Good Morning Beautiful.mp3
+230:EmoShi/Deftones - Minerva.mp3
+231:EmoShi/Deftones - 976-EVIL.mp3
+232:EmoShi/Deftones - Beauty School.mp3
+233:EmoShi/Deftones - Diamond Eyes.mp3
+234:EmoShi/Deftones - Risk.mp3
+235:EmoShi/Deftones - Royal.mp3
+236:EmoShi/Deftones - Sextape.mp3
+237:EmoShi/Deftones - This Place Is Death.mp3
+238:EmoShi/Deftones - Entombed.mp3
+239:EmoShi/Deftones - Gauze.mp3
+240:EmoShi/Deftones - Graphic Nature.mp3
+241:EmoShi/Deftones - Romantic Dreams.mp3
+242:EmoShi/Deftones - Rosemary.mp3
+243:EmoShi/Deftones - Swerve City.mp3
+244:EmoShi/Deftones - Tempest.mp3
+245:EmoShi/Deftones - What Happened to You.mp3
+246:EmoShi/Deftones - my mind is a mountain.mp3
+247:EmoShi/Deftones - Ceremony.mp3
+248:EmoShi/Deftones - Genesis.mp3
+249:EmoShi/Deftones - Ohms.mp3
+250:EmoShi/Deftones - Pompeji.mp3
+251:EmoShi/Deftones - The Spell of Mathematics.mp3
+252:EmoShi/Deftones - Beware.mp3
+253:EmoShi/Deftones - Cherry Waves.mp3
+254:EmoShi/Deftones - Hole in the Earth.mp3
+255:EmoShi/Deftones - Kimdracula.mp3
+256:EmoShi/Deftones - Mein.mp3
+257:EmoShi/Deftones - U,U,D,D,L,R,L,R,A,B,Select,Start.mp3
+258:EmoShi/Deftones - Xerces.mp3
+259:EmoShi/Deftones - Change (In the House of Flies).mp3
+260:EmoShi/Deftones - Digital Bath.mp3
+261:EmoShi/Deftones - Knife Prty.mp3
+262:EmoShi/Deftones - Passenger.mp3
+263:EmoShi/Deftones - Street Carp.mp3
+264:EmoShi/Deftones - Elite.mp3
+265:EmoShi/Dwellings - Codphish Joe.mp3
+266:EmoShi/Dwellings - Foreverest.mp3
+267:EmoShi/Dwellings - Lemonade.mp3
+268:EmoShi/Dwellings - Ordinary Destruction.mp3
+269:EmoShi/Dwellings - See It Through.mp3
+270:EmoShi/Dwellings - Sins As Wonders.mp3
+271:EmoShi/Dwellings - Devices.mp3
+272:EmoShi/Dwellings - It's All There.mp3
+273:EmoShi/Dwellings - Redd.mp3
+274:EmoShi/Hail The Sun - Body Damage.mp3
+275:EmoShi/Hail The Sun - Burn Nice and Slow (The Formative Years).mp3
+276:EmoShi/Hail The Sun - Doing the Same Thing and Expecting Different Results.mp3
+277:EmoShi/Hail The Sun - Entertainment Lies.mp3
+278:EmoShi/Hail The Sun - Ministry of Truth.mp3
+279:EmoShi/Hail The Sun - Never Kill a Mouse; Let It Kill Itself.mp3
+280:EmoShi/Hail The Sun - Paranoia.mp3
+281:EmoShi/Hail The Sun - The 'Fun' in Dysfunction.mp3
+282:EmoShi/Hail The Sun - The People That Protect Us.mp3
+283:EmoShi/Hail The Sun - Words of Gratitude (Parents).mp3
+284:EmoShi/Hail The Sun - Devastate and Recalibrate.mp3
+285:EmoShi/Hail The Sun - (In My Dream).mp3
+286:EmoShi/Hail The Sun - 60-Minute Session Blocks.mp3
+287:EmoShi/Hail The Sun - Chunker.mp3
+288:EmoShi/Hail The Sun - Feeble Words.mp3
+289:EmoShi/Hail The Sun - I Saw You Hanging.mp3
+290:EmoShi/Hail The Sun - Little Song.mp3
+291:EmoShi/Hail The Sun - Maladapted.mp3
+292:EmoShi/Hail The Sun - Mind Rider.mp3
+293:EmoShi/Hail The Sun - The Story Writes Itself.mp3
+294:EmoShi/Hail The Sun - Tithe.mp3
+295:EmoShi/Hail The Sun - Tunnel Vision Alibi.mp3
+296:EmoShi/Hail The Sun - Under the Floor.mp3
+297:EmoShi/Hail The Sun - Dead Messages.mp3
+298:EmoShi/Hail The Sun - Eight-Ball, Coroner's Pocket.mp3
+299:EmoShi/Hail The Sun - Ow! (Splidao!) [I Like It, Though].mp3
+300:EmoShi/Hail The Sun - Testostyrannosaurus.mp3
+301:EmoShi/Hail The Sun - Will They Blame Me If You Go Disappearing.mp3
+302:EmoShi/Hail The Sun - A Lesson in Lust.mp3
+303:EmoShi/Hail The Sun - Arcane Justice.mp3
+304:EmoShi/Hail The Sun - Devotion Cuts.mp3
+305:EmoShi/Hail The Sun - Feel It When Convenient.mp3
+306:EmoShi/Hail The Sun - Glass- Half Empty.mp3
+307:EmoShi/Hail The Sun - Gouge & Uproot.mp3
+308:EmoShi/Hail The Sun - Mental Knife.mp3
+309:EmoShi/Hail The Sun - On Existence.mp3
+310:EmoShi/Hail The Sun - RiskReward.mp3
+311:EmoShi/Hail The Sun - Suffocating Syndrome.mp3
+312:EmoShi/Hail The Sun - The Stranger in Our Pictures.mp3
+313:EmoShi/Hail The Sun - Devaluation.mp3
+314:EmoShi/Hail The Sun - Domino.mp3
+315:EmoShi/Hail The Sun - Hysteriantics.mp3
+316:EmoShi/Hail The Sun - Made Your Mark.mp3
+317:EmoShi/Hail The Sun - Misfire.mp3
+318:EmoShi/Hail The Sun - Parasitic Cleanse.mp3
+319:EmoShi/Hail The Sun - Punch Drunk.mp3
+320:EmoShi/Hail The Sun - Slander.mp3
+321:EmoShi/Hail The Sun - Slipped My Mind.mp3
+322:EmoShi/Hail The Sun - Solipsism.mp3
+323:EmoShi/Hail The Sun - Crying is Only Manly if Splinters Come out.mp3
+324:EmoShi/Hail The Sun - Dinosaur, God Hates it When We Think.mp3
+325:EmoShi/Hail The Sun - Orion.mp3
+326:EmoShi/Hail The Sun - Railmaster.mp3
+327:EmoShi/Hail The Sun - Ready or Not, There I Go.mp3
+328:EmoShi/Hail The Sun - Sleep Now, and Forever Wet Your Dreams.mp3
+329:EmoShi/Hail The Sun - Sunny Day.mp3
+330:EmoShi/Hail The Sun - There's Plenty of Fish in the Sea (Too Bad You're Not a Fish).mp3
+331:EmoShi/Hail The Sun - Secondary Worship.mp3
+332:EmoShi/Hail The Sun - 1109.mp3
+333:EmoShi/Hail The Sun - Bound.mp3
+334:EmoShi/Hail The Sun - Repellent.mp3
+335:EmoShi/Hail The Sun - Secret Wars.mp3
+336:EmoShi/Hail The Sun - Spite.mp3
+337:EmoShi/Hail The Sun - The Drooling Class.mp3
+338:EmoShi/Hail The Sun - Relax  Divide (Explicit).mp3
+339:EmoShi/Hail The Sun - Anti-Eulogy (I Hope You Stay Dead) (Explicit).mp3
+340:EmoShi/Hail The Sun - Black Serotonin (Explicit).mp3
+341:EmoShi/Hail The Sun - Cosmic Narcissism.mp3
+342:EmoShi/Hail The Sun - Disappearing Syndrome (Explicit).mp3
+343:EmoShi/Hail The Sun - Falling On Deaf Ears.mp3
+344:EmoShi/Hail The Sun - Hanging Revelation.mp3
+345:EmoShi/Hail The Sun - Human Target Practice.mp3
+346:EmoShi/Hail The Sun - Jane Doe.mp3
+347:EmoShi/Hail The Sun - Missed Injections.mp3
+348:EmoShi/Hail The Sun - Mourning Sickness.mp3
+349:EmoShi/Hail The Sun - Rolling Out the Red Carpet.mp3
+350:EmoShi/I Met a Yeti - All Magic Users Swim in the Loomy Gloom.mp3
+351:EmoShi/I Met a Yeti - Blue-Eyes White Yeti.mp3
+352:EmoShi/I Met a Yeti - Honey Bee.mp3
+353:EmoShi/I Met a Yeti - Magic, Madness, and Sadness.mp3
+354:EmoShi/I Met a Yeti, Andy Cizek - Cherry Blossom.mp3
+355:EmoShi/I Met a Yeti, deviin - Red-Eyes B. Yeti.mp3
+356:EmoShi/I Met a Yeti - Danger! Chupacabra!.mp3
+357:EmoShi/I Met a Yeti - Dancing Plague.mp3
+358:EmoShi/I Met a Yeti, Andrés - Metal Slime.mp3
+359:EmoShi/I Met a Yeti, deviin - Cthuwu.mp3
+360:EmoShi/I Met a Yeti, Pulses., deviin - Opulence.mp3
+361:EmoShi/In Angles - Annuals.mp3
+362:EmoShi/In Angles - Magnolia.mp3
+363:EmoShi/In Angles - Rogr Stahlback.mp3
+364:EmoShi/In Angles - Wanderer.mp3
+365:EmoShi/In Angles - 6 am.mp3
+366:EmoShi/In Angles - Backbone.mp3
+367:EmoShi/In Angles - Fluorescent.mp3
+368:EmoShi/In Angles - Melonhead.mp3
+369:EmoShi/In Angles - No Sweat.mp3
+370:EmoShi/In Angles - Open Season.mp3
+371:EmoShi/In Angles - Portrait.mp3
+372:EmoShi/In Angles - The Last Summer.mp3
+373:EmoShi/In Angles - Trench.mp3
+374:EmoShi/In Angles - Two Weeks.mp3
+375:EmoShi/In Angles - Unguided.mp3
+376:EmoShi/In Angles - A & T.mp3
+377:EmoShi/In Angles - Brother.mp3
+378:EmoShi/In Angles - Rennaissance.mp3
+379:EmoShi/In Angles - Solidarity.mp3
+380:EmoShi/In Angles - They're Giving Out Freebees.mp3
+381:EmoShi/In Angles - Dozer.mp3
+382:EmoShi/Kurt Travis - Casting Dreams.mp3
+383:EmoShi/Kurt Travis - It’s All Over.mp3
+384:EmoShi/Kurt Travis - Overthinking.mp3
+385:EmoShi/Kurt Travis - angband.mp3
+386:EmoShi/Kurt Travis - illuvatar.mp3
+387:EmoShi/Kurt Travis - mt utumno.mp3
+388:EmoShi/Kurt Travis - the maiar.mp3
+389:EmoShi/Kurt Travis - the valar.mp3
+390:EmoShi/Kurt Travis - Easy Peasy.mp3
+391:EmoShi/Kurt Travis - Tomorrow Will Be Fine.mp3
+392:EmoShi/Kurt Travis - Wha Happen.mp3
+393:EmoShi/Kurt Travis, Andrés - Too Much Space.mp3
+394:EmoShi/Lower Definition - To Satellite.mp3
+395:EmoShi/Nova Charisma - Boomerang.mp3
+396:EmoShi/Nova Charisma - Lies Animals Tell.mp3
+397:EmoShi/Nova Charisma - Misleading the Story.mp3
+398:EmoShi/Nova Charisma - Diary (Don't Speak).mp3
+399:EmoShi/Nova Charisma - Gemini.mp3
+400:EmoShi/Nova Charisma - Hoxton.mp3
+401:EmoShi/Nova Charisma - Sonya.mp3
+402:EmoShi/Nova Charisma - Float Up. Stay There..mp3
+403:EmoShi/Nova Charisma - Hurt the Worst.mp3
+404:EmoShi/Nova Charisma - The Greater Cause.mp3
+405:EmoShi/Nova Charisma - Hollow People.mp3
+406:EmoShi/Nova Charisma - All My Thoughts Into Hooks.mp3
+407:EmoShi/Nova Charisma - Every Walk To Your Apartment.mp3
+408:EmoShi/Nova Charisma - Irresistible Frame.mp3
+409:EmoShi/Nova Charisma - Pain Giver.mp3
+410:EmoShi/Nova Charisma - Prophet.mp3
+411:EmoShi/Nova Charisma - The Better It Gets.mp3
+412:EmoShi/Nova Charisma - Two Eighty.mp3
+413:EmoShi/Nova Charisma - Where Do You Come From.mp3
+414:EmoShi/Paramore - Conspiracy.mp3
+415:EmoShi/Royal Coda - All In Question.mp3
+416:EmoShi/Royal Coda - Arms Race For God’s Grace.mp3
+417:EmoShi/Royal Coda - Becoming The Memory.mp3
+418:EmoShi/Royal Coda - Numbing Agent.mp3
+419:EmoShi/Royal Coda - Ruby Leaf.mp3
+420:EmoShi/Royal Coda - The Innocence Of.mp3
+421:EmoShi/Royal Coda, Donovan Melero - Don’t Stay Long (feat. Donovan Melero).mp3
+422:EmoShi/Royal Coda - Even If.mp3
+423:EmoShi/Royal Coda - Anything To Save.mp3
+424:EmoShi/Royal Coda - Blood Thinner.mp3
+425:EmoShi/Royal Coda - Breathe Correct.mp3
+426:EmoShi/Royal Coda - Calm and Composed.mp3
+427:EmoShi/Royal Coda - Cut Me Under.mp3
+428:EmoShi/Royal Coda - Cycled Through The Past.mp3
+429:EmoShi/Royal Coda - Love Again.mp3
+430:EmoShi/Royal Coda - See Them Faceless.mp3
+431:EmoShi/Royal Coda - As We Fall Into Deep Waters.mp3
+432:EmoShi/Royal Coda - Insatiate, The Senses.mp3
+433:EmoShi/Royal Coda - It Found A Different Path.mp3
+434:EmoShi/Royal Coda - Malfunctioning Parts.mp3
+435:EmoShi/Royal Coda - Once Clinging To The Reeds.mp3
+436:EmoShi/Royal Coda - One Last Time, Like Hypothermia.mp3
+437:EmoShi/Royal Coda - Screen Time Overload.mp3
+438:EmoShi/Royal Coda - To Only A Few At First.mp3
+439:EmoShi/Royal Coda - We Slowly Lose Hope For Things To Come.mp3
+440:EmoShi/Royal Coda - Where The Air Seemed To Cease.mp3
+441:EmoShi/Saosin - Along the Shadow of Man.mp3
+442:EmoShi/Saosin - Control and The Urge to Pray.mp3
+443:EmoShi/Saosin - Count Back from TEN.mp3
+444:EmoShi/Saosin - Drinking from the Fountain.mp3
+445:EmoShi/Saosin - Ideology Is Theft.mp3
+446:EmoShi/Saosin - Illusion & Control.mp3
+447:EmoShi/Saosin - Old Friends.mp3
+448:EmoShi/Saosin - Racing Toward a Red Light.mp3
+449:EmoShi/Saosin - Second Guesses.mp3
+450:EmoShi/Saosin - Sore Distress.mp3
+451:EmoShi/Saosin - The Secret Meaning of Freedom.mp3
+452:EmoShi/Saosin - The Silver String.mp3
+453:EmoShi/Saosin - The Stutter Says A Lot.mp3
+454:EmoShi/Saosin - Bury Your Head.mp3
+455:EmoShi/Saosin - Collapse.mp3
+456:EmoShi/Saosin - Come Close.mp3
+457:EmoShi/Saosin - Finding Home.mp3
+458:EmoShi/Saosin - Follow And Feel.mp3
+459:EmoShi/Saosin - I Never Wanted To.mp3
+460:EmoShi/Saosin - It's Far Better To Learn.mp3
+461:EmoShi/Saosin - It's So Simple.mp3
+462:EmoShi/Saosin - Sleepers.mp3
+463:EmoShi/Saosin - Some Sense Of Security.mp3
+464:EmoShi/Saosin - Voices.mp3
+465:EmoShi/Saosin - You're Not Alone.mp3
+466:EmoShi/Saosin - 3rd Measurement in C.mp3
+467:EmoShi/Saosin - Lost Symphonies.mp3
+468:EmoShi/Saosin - Seven Years.mp3
+469:EmoShi/Saosin - They Perched on Their Stilts, Pointing and Daring Me to Break Custom.mp3
+470:EmoShi/Saosin - Translating the Name.mp3
+471:EmoShi/Sea in the Sky - An Appeal to Emotion.mp3
+472:EmoShi/Sea in the Sky - Dreamer.mp3
+473:EmoShi/Sea in the Sky - Everything All at Once.mp3
+474:EmoShi/Sea in the Sky - False Cods.mp3
+475:EmoShi/Sea in the Sky - Imposter Syndrome.mp3
+476:EmoShi/Sea in the Sky - Neck Romancer.mp3
+477:EmoShi/Sea in the Sky - Night Anchor.mp3
+478:EmoShi/Sea in the Sky - Not Too Tall, Not Too Cool.mp3
+479:EmoShi/Sea in the Sky - Overview Effect.mp3
+480:EmoShi/Sea in the Sky - Pale Blue Dot.mp3
+481:EmoShi/Sea in the Sky - Wait, Patiently.mp3
+482:EmoShi/Sea in the Sky - Cosmonauts.mp3
+483:EmoShi/Sea in the Sky - Dingis.mp3
+484:EmoShi/Sea in the Sky - Future Babez.mp3
+485:EmoShi/Sea in the Sky - Radical!.mp3
+486:EmoShi/Sea in the Sky - You Ate My Sandwich.mp3
+487:EmoShi/Sea in the Sky - Krill.mp3
+488:EmoShi/Sea in the Sky - Serenity.mp3
+489:EmoShi/Sea in the Sky - Tamagotchi.mp3
+490:EmoShi/Sea in the Sky - Tread Lightly.mp3
+491:EmoShi/Sea in the Sky - Visions.mp3
+492:EmoShi/Sianvar - Chest Pressure.mp3
+493:EmoShi/Sianvar - Sick Machine.mp3
+494:EmoShi/Sianvar - Substance Sequence.mp3
+495:EmoShi/Sianvar - Virtual Vain.mp3
+496:EmoShi/Sianvar - Your Tongue Ties.mp3
+497:EmoShi/Sianvar - 1100 Days.mp3
+498:EmoShi/Sianvar - Anticoagulant.mp3
+499:EmoShi/Sianvar - BedRoots.mp3
+500:EmoShi/Sianvar - Coordinate Love.mp3
+501:EmoShi/Sianvar - Don’t Carry This.mp3
+502:EmoShi/Sianvar - Foxholes and Deities.mp3
+503:EmoShi/Sianvar - Omniphobia.mp3
+504:EmoShi/Sianvar - Psychosis Succumbing.mp3
+505:EmoShi/Sianvar - Stay Lost.mp3
+506:EmoShi/Sianvar - Stay Scared.mp3
+507:EmoShi/Sincerely, Adventurer - That's What You Said Last Time.mp3
+508:EmoShi/Sleeping With Sirens - If I'm James Dean, You're Audrey Hepburn.mp3
+509:EmoShi/Stolas - Allokinetic.mp3
+510:EmoShi/Stolas - Allomaternal.mp3
+511:EmoShi/Stolas - Claw Point.mp3
+512:EmoShi/Stolas - Counterpoise.mp3
+513:EmoShi/Stolas - Fair Chase.mp3
+514:EmoShi/Stolas - Hiraeth.mp3
+515:EmoShi/Stolas - Losing Wings.mp3
+516:EmoShi/Stolas - Proving Grounds.mp3
+517:EmoShi/Stolas - Solunar.mp3
+518:EmoShi/Stolas - Destroyer.mp3
+519:EmoShi/Stolas - Our Last Night On Earth.mp3
+520:EmoShi/Stolas - Panic.mp3
+521:EmoShi/Stolas - Thief & The Hourglass.mp3
+522:EmoShi/Stolas - Time & The Sun.mp3
+523:EmoShi/Stolas, Cory Lockwood - Captured Light (feat. Cory Lockwood).mp3
+524:EmoShi/Stolas, Donovan Melero - Circuit Theory (feat. Donovan Melero).mp3
+525:EmoShi/Stolas, Kurt Travis - Medusa (feat. Kurt Travis).mp3
+526:EmoShi/Stolas, Tilian - Year Of The Light (feat. Tilian Pearson).mp3
+527:EmoShi/Stolas - Anecdoche.mp3
+528:EmoShi/Stolas - Anhedonia.mp3
+529:EmoShi/Stolas - Bellwether.mp3
+530:EmoShi/Stolas - Catalyst.mp3
+531:EmoShi/Stolas - Cold & Unmanageable.mp3
+532:EmoShi/Stolas - Damage Division.mp3
+533:EmoShi/Stolas - Euphoria.mp3
+534:EmoShi/Stolas - Maximizer.mp3
+535:EmoShi/Stolas - Metempsychosis.mp3
+536:EmoShi/Stolas - Pacesetter.mp3
+537:EmoShi/Sunny Day Real Estate - Pillars.mp3
+538:EmoShi/The Fall of Troy - Act One, Scene One.mp3
+539:EmoShi/The Fall of Troy - F.C.P.R.E.M.I.X..mp3
+540:EmoShi/The Fall of Troy - I Just Got This Symphony Goin'.mp3
+541:EmoShi/The Fall of Troy - Laces Out, Dan!.mp3
+542:EmoShi/The Fall of Troy - Macaulay McCulkin.mp3
+543:EmoShi/The Fall of Troy - Mouths Like Sidewinder Missles.mp3
+544:EmoShi/The Fall of Troy - The Hol[ ]y Tape....mp3
+545:EmoShi/The Fall of Troy - Tom Waits.mp3
+546:EmoShi/The Fall of Troy - We Better Learn To Hotwire A Uterus.mp3
+547:EmoShi/The Fall of Troy - 'You Got A Death Wish, Johnny Truant'.mp3
+548:EmoShi/The Fall of Troy - A Classic Case of Transference.mp3
+549:EmoShi/The Fall of Troy - Battleship Graveyard.mp3
+550:EmoShi/The Fall of Troy - Dirty Pillow Talk.mp3
+551:EmoShi/The Fall of Troy - Empty the Clip, the King Has Been Slain, Long Live the Queen!.mp3
+552:EmoShi/The Fall of Troy - Nature vs. Nurture.mp3
+553:EmoShi/The Fall of Troy - Nobody's Perfect.mp3
+554:EmoShi/The Fall of Troy - Panic Attack!.mp3
+555:EmoShi/The Fall of Troy - People and Their Lives.mp3
+556:EmoShi/The Fall of Troy - Single.mp3
+557:EmoShi/The Fall of Troy - Straight-Jacket Keelhauled.mp3
+558:EmoShi/The Fall of Troy - Walk of Fame.mp3
+559:EmoShi/The Fall of Troy - Webs.mp3
+560:EmoShi/The Fall of Troy - A Man. A Plan. A Canal. Panama..mp3
+561:EmoShi/The Fall of Troy - caught Up.mp3
+562:EmoShi/The Fall of Troy - Cut Down All the Trees And Name The Streets After Them.mp3
+563:EmoShi/The Fall of Troy - Ex-Creations.mp3
+564:EmoShi/The Fall of Troy - Oh! The Casino!.mp3
+565:EmoShi/The Fall of Troy - Problem!.mp3
+566:EmoShi/The Fall of Troy - Quarter Past.mp3
+567:EmoShi/The Fall of Troy - Seattlanis.mp3
+568:EmoShi/The Fall of Troy - Semi-Fiction.mp3
+569:EmoShi/The Fall of Troy - Shhh!!! If You're Quiet, I'll Show You A Dinosaur.mp3
+570:EmoShi/The Fall of Troy - Sledgehammer.mp3
+571:EmoShi/The Fall of Troy - The Dark Trail.mp3
+572:EmoShi/The Fall of Troy - Chain Wallet, Nike Shoes.mp3
+573:EmoShi/The Fall of Troy - A Single Word.mp3
+574:EmoShi/The Fall of Troy - Chapter I- Introverting Dimensions.mp3
+575:EmoShi/The Fall of Troy - Chapter II- A Strange Conversation.mp3
+576:EmoShi/The Fall of Troy - Chapter III- Nostalgic MannerIsms.mp3
+577:EmoShi/The Fall of Troy - Chapter IV- Enter the Black Demon.mp3
+578:EmoShi/The Fall of Troy - Chapter V- the Walls Bled Lust.mp3
+579:EmoShi/The Fall of Troy - F.C.P.S.I.T.S.G.E.P.G.E.P.G.E.P..mp3
+580:EmoShi/The Fall of Troy - Mouths Like Sidewinder Missiles.mp3
+581:EmoShi/The Fall of Troy - Reassurance Rests In The Sea.mp3
+582:EmoShi/The Fall of Troy - Rockstar Nailbomb!.mp3
+583:EmoShi/The Fall of Troy - Spartacus.mp3
+584:EmoShi/The Fall of Troy - The Adventures of Allan Gordon.mp3
+585:EmoShi/The Fall of Troy - The Circus That Has brought Us Back To These Nights (Yo Chocola).mp3
+586:EmoShi/The Fall of Troy - The Last March Of The Ents.mp3
+587:EmoShi/The Fall of Troy - Whacko Jacko Steals The Elephant Man's Bones.mp3
+588:EmoShi/The Fall of Troy - What Sound Does A Mastodon Make.mp3
+589:EmoShi/Tides Of Man - A Faint Illusion.mp3
+590:EmoShi/Tides Of Man - Chemical Fires.mp3
+591:EmoShi/Tides Of Man - Dreamhouse.mp3
+592:EmoShi/Tides Of Man - Echoes.mp3
+593:EmoShi/Tides Of Man - Home.mp3
+594:EmoShi/Tides Of Man - Not My Love 2.mp3
+595:EmoShi/Tides Of Man - Only Human.mp3
+596:EmoShi/Tides Of Man - Salamanders and Worms.mp3
+597:EmoShi/Tides Of Man - Statues.mp3
+598:EmoShi/Tides Of Man - Sunshine.mp3
+599:EmoShi/Tides Of Man - Colors Speak True.mp3
+600:EmoShi/Tides Of Man - Contents Within.mp3
+601:EmoShi/Tides Of Man - Create Couldn't Keep Up.mp3
+602:EmoShi/Tides Of Man - Descent.mp3
+603:EmoShi/Tides Of Man - Empire Theory.mp3
+604:EmoShi/Tides Of Man - I Saw Mercy Conquer Hate.mp3
+605:EmoShi/Tides Of Man - Knowing That You've Already Arrived.mp3
+606:EmoShi/Tides Of Man - Not My Love.mp3
+607:EmoShi/Tides Of Man - Rescue.mp3
+608:EmoShi/Tides Of Man - Western Scene.mp3
+609:EmoShi/Tides Of Man - And Again.mp3
+610:EmoShi/Tides Of Man - Descent from Destiny.mp3
+611:EmoShi/Tides Of Man - We Take Oaths to Lie.mp3
+612:EmoShi/Tides Of Man - All the Years.mp3
+613:EmoShi/Tides Of Man - Desolate. Magnificent..mp3
+614:EmoShi/Tides Of Man - Drift.mp3
+615:EmoShi/Tides Of Man - Eyes Like Strange Sins.mp3
+616:EmoShi/Tides Of Man - Hold Still.mp3
+617:EmoShi/Tides Of Man - Keep Me Safe.mp3
+618:EmoShi/Tides Of Man - Measure Your Breath.mp3
+619:EmoShi/Tides Of Man - Mountain House.mp3
+620:EmoShi/Tides Of Man - Parallels.mp3
+621:EmoShi/Tides Of Man - We Were Only Dreaming.mp3
+622:EmoShi/Tides Of Man - Young and Courageous.mp3
+623:EmoShi/Wolf & Bear - BELLADONNA.mp3
+624:EmoShi/Wolf & Bear - CHAD B. KANG.mp3
+625:EmoShi/Wolf & Bear - K. RESORT.mp3
+626:EmoShi/Wolf & Bear - POOFY.mp3
+627:EmoShi/Wolf & Bear - QUICK SIP 84.mp3
+628:EmoShi/Wolf & Bear, Andrew Michael Wells - THERE'S NO DUST IN THE CITY (feat. Andrew Michael Wells).mp3
+629:EmoShi/Wolf & Bear - Deleto.mp3
+630:EmoShi/Wolf & Bear - 61029240.mp3
+631:EmoShi/Wolf & Bear - Armillaria Mellea.mp3
+632:EmoShi/Wolf & Bear - Balcony.mp3
+633:EmoShi/Wolf & Bear - Catch and Release.mp3
+634:EmoShi/Wolf & Bear - Dead Life.mp3
+635:EmoShi/Wolf & Bear - Everything Is Going Grey.mp3
+636:EmoShi/Wolf & Bear - Greyblood.mp3
+637:EmoShi/Wolf & Bear - Tenere Acacia.mp3
+638:EmoShi/Wolf & Bear - Twisted Tongues.mp3
+639:EmoShi/Wolf & Bear - War Paint.mp3
+640:EmoShi/Wolf & Bear - Oil Cup.mp3
+641:EmoShi/Wolf & Bear - Sight.mp3
+642:EmoShi/Wolf & Bear - Different Fires.mp3
+643:EmoShi/Wolf & Bear - Restore.mp3
+playlist_end

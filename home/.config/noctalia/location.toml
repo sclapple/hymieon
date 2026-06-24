@@ -1,0 +1,7 @@
+[location]
+auto_locate = true
+
+[weather]
+auto_locate = true
+unit = "imperial"
+

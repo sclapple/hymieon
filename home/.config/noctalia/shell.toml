@@ -1,0 +1,57 @@
+[shell]
+avatar_path = "__HOME__/Pictures/abrams.jpg"
+font_family = "Noto Sans"
+password_style = "random"
+polkit_agent = true
+telemetry_enabled = true
+screen_time_enabled = false
+clipboard_auto_paste = "off"
+
+[shell.mpris]
+blacklist = [ ]
+
+[shell.panel]
+open_near_click_control_center = true
+transparency_mode = "glass"
+session_placement = "centered"
+wallpaper_placement = "centered"
+
+[shell.screenshot]
+directory = "~/Pictures/Screenshots"
+
+[[shell.session.actions]]
+action = "lock"
+enabled = true
+shortcut = "1"
+variant = "default"
+
+[[shell.session.actions]]
+action = "command"
+command = "hyprshutdown"
+enabled = true
+label = "Log out"
+shortcut = "2"
+variant = "default"
+
+[[shell.session.actions]]
+action = "suspend"
+enabled = true
+shortcut = "3"
+variant = "default"
+
+[[shell.session.actions]]
+action = "command"
+command = "hyprshutdown -t 'Restarting...' --post-cmd 'reboot'"
+enabled = true
+label = "Reboot"
+shortcut = "4"
+variant = "default"
+
+[[shell.session.actions]]
+action = "command"
+command = "hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'"
+enabled = true
+label = "Shutdown"
+shortcut = "5"
+variant = "default"
+

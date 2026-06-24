@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SOCKET="/tmp/nvimsocket"
+
+if nvr --servername "$SOCKET" --remote-tab-silent "$@" 2>/dev/null; then
+  exit 0
+else
+  kitty nvim "$@" &
+  exit 0
+fi

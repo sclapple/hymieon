@@ -1,0 +1,4 @@
+[[opener]]
+names = ["text/*"]
+run = "nvim $@"
+block = true

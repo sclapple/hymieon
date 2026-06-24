@@ -1,0 +1,93 @@
+#!/usr/bin/env bash
+
+HYPRPROP_PID='/tmp/hyprprop.pid'
+echo $$ > "$HYPRPROP_PID"
+
+SOCKET_PATH="$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock"
+
+prop() {
+    out_file=/tmp/hyprprop.out
+
+    visible_workspaces=$(hyprctl monitors -j \
+                        | jq -r '[.[].activeWorkspace.id,
+                                  .[].specialWorkspace.id | select(. != null and . != 0)]
+                                 | flatten
+                                 | unique')
+
+    hyprctl clients -j | jq --argjson visibleWorkspaces "$visible_workspaces" \
+                            -r '.[] | select([.workspace.id] | inside($visibleWorkspaces))
+                                    | [.at[0], .at[1], .size[0], .size[1]]
+                                    | "\(.[0]),\(.[1]) \(.[2])x\(.[3])"' \
+                       | slurp -r > "$out_file" 2>/dev/null &
+    PID=$!
+    wait $PID
+    slurp_exit=$?
+
+    selection=$(cat "$out_file")
+    rm -f "$out_file"
+
+    [ "$slurp_exit" -ne 0 ] && cleanup && exit
+    [ "$selection" = "null,null nullxnull" ] && prop
+    [ -z "$selection" ] && cleanup && exit
+
+    x=$(echo "$selection" | awk -F'[, x]' '{print $1}')
+    y=$(echo "$selection" | awk -F'[, x]' '{print $2}')
+    w=$(echo "$selection" | awk -F'[, x]' '{print $3}')
+    h=$(echo "$selection" | awk -F'[, x]' '{print $4}')
+
+    hyprctl clients -j | jq --argjson visibleWorkspaces "$visible_workspaces" \
+                            --argjson x "$x" --argjson y "$y" \
+                            --argjson w "$w" --argjson h "$h" \
+                            '.[] | select([.workspace.id] | inside($visibleWorkspaces))
+                                 | select(.hidden == false)
+                                 | select(.at | type == "array")
+                                 | select(.size | type == "array")
+                                 | select(.at[0] == ($x | tonumber)
+                                 and .at[1] == ($y | tonumber)
+                                 and .size[0] == ($w | tonumber)
+                                 and .size[1] == ($h | tonumber))'
+
+    cleanup
+    exit
+}
+
+cleanup() {
+    kill "$LISTENER_PID" 2>/dev/null
+    rm -f "$HYPRPROP_PID"
+}
+
+event_handler() {
+    pkill slurp
+    wait "$PID" 2>/dev/null
+    prop
+}
+
+terminate() {
+    pkill slurp
+    wait "$PID" 2>/dev/null
+    cleanup
+    exit
+}
+
+if [ -S "$SOCKET_PATH" ]; then
+    {
+        socat -U - UNIX-CONNECT:"$SOCKET_PATH" 2>/dev/null | \
+        while read -r line; do
+            case $line in
+                workspace*|focusedmon*|fullscreen*|openwindow*|closewindow*|createworkspace*|destroyworkspace*|moveworkspace*|movewindow*|monitoradded*|monitorremoved*)
+                    kill -USR1 "$(cat "$HYPRPROP_PID" 2>/dev/null)" 2>/dev/null
+                    ;;
+            esac
+        done
+    } &
+    LISTENER_PID=$!
+else
+    echo "hyprprop: Hyprland socket not found at $SOCKET_PATH" >&2
+    echo "Is Hyprland running?" >&2
+    exit 1
+fi
+
+trap event_handler USR1
+trap terminate SIGINT
+
+prop

@@ -1,0 +1,8 @@
+[osd]
+position = "top_center"
+
+[osd.kinds]
+lock_keys = true
+do_not_disturb = false
+
+

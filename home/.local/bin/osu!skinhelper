@@ -1,0 +1,107 @@
+#!/usr/bin/env python3
+import configparser
+import json
+import shutil
+import sys
+import os
+
+SKINS_DIR = "/mnt/11f7141a-18fd-46e9-9e9d-28e3f5f6184e/osu!stuff/osu!/Skins"
+TEMPLATE_SKIN = None
+
+SKININFO_TPL = {
+    "InstantiationInfo": "osu.Game.Skinning.LegacySkin, osu.Game"
+}
+
+LAYOUT_FILES = [
+    "MainHUDComponents.json",
+    "Playfield.json",
+    "SongSelect.json",
+]
+
+
+def process_skin(skin_path, force=False, template_dir=None):
+    results = []
+
+    # skininfo.json
+    ini_path = os.path.join(skin_path, "skin.ini")
+    info_path = os.path.join(skin_path, "skininfo.json")
+
+    if os.path.isfile(ini_path):
+        if os.path.isfile(info_path) and not force:
+            results.append("skininfo skipped (exists)")
+        else:
+            with open(ini_path) as f:
+                ini_content = "\n".join(
+                    line for line in f if not line.startswith("//")
+                )
+            config = configparser.ConfigParser()
+            config.read_string(ini_content)
+            try:
+                name = config["General"]["Name"]
+            except KeyError:
+                results.append("error (missing Name)")
+            else:
+                creator = config["General"].get("Author",
+                          config["General"].get("Creator", "Unknown"))
+                info = {"Name": name, "Creator": creator, **SKININFO_TPL}
+                with open(info_path, "w") as f:
+                    json.dump(info, f, indent=2)
+                    f.write("\n")
+                results.append("skininfo created")
+    else:
+        results.append("skininfo skipped (no skin.ini)")
+
+    # layout files
+    if template_dir and os.path.isdir(template_dir):
+        for filename in LAYOUT_FILES:
+            src = os.path.join(template_dir, filename)
+            dst = os.path.join(skin_path, filename)
+            if not os.path.isfile(src):
+                continue
+            if os.path.isfile(dst) and not force:
+                results.append(f"{filename} skipped (exists)")
+                continue
+            shutil.copy2(src, dst)
+            results.append(f"{filename} copied")
+
+    return "; ".join(results) if results else "no changes"
+
+
+def main():
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Generate skininfo.json and copy layout files for osu!lazer"
+    )
+    parser.add_argument("path", nargs="?", default=SKINS_DIR,
+                        help=f"Path to Skins directory (default: {SKINS_DIR})")
+    parser.add_argument("-f", "--force", action="store_true",
+                        help="Overwrite existing files")
+    parser.add_argument("-t", "--template",
+                        help="Reference skin directory with layout JSONs to copy")
+    args = parser.parse_args()
+
+    skins_dir = args.path
+    if not os.path.isdir(skins_dir):
+        print(f"Error: {skins_dir} is not a directory", file=sys.stderr)
+        sys.exit(1)
+
+    template_dir = args.template
+
+    entries = sorted(os.listdir(skins_dir))
+    total = 0
+    for entry in entries:
+        skin_path = os.path.join(skins_dir, entry)
+        if not os.path.isdir(skin_path):
+            continue
+        if template_dir and os.path.realpath(skin_path) == os.path.realpath(template_dir):
+            continue
+        total += 1
+        result = process_skin(skin_path, force=args.force, template_dir=template_dir)
+        print(f"  {entry}: {result}")
+
+    print(f"\nDone — {total} skins processed")
+
+
+if __name__ == "__main__":
+    main()

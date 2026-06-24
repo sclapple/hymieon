@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=osu! Skin Mixer
+Exec=__HOME__/.local/bin/osu!skinmixer
+Icon=osu!
+Type=Application
+Categories=Game;

@@ -1,0 +1,11 @@
+[wallpaper]
+directory = "~/Pictures/Wallpapers"
+enabled = true
+transition_on_startup = false
+
+[wallpaper.automation]
+enabled = true
+interval_seconds = 3600
+
+
+

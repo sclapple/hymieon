@@ -1,0 +1,6 @@
+[dock]
+enabled = false
+auto_hide = true
+active_monitor_only = true
+pinned = [ "kitty", "org.gnome.Nautilus", "zen", "feishin", "vesktop", "lutris", "osu-lazer", "opentabletdriver" ]
+

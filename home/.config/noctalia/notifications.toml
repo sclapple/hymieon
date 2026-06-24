@@ -1,0 +1,5 @@
+[notification]
+layer = "overlay"
+position = "top_center"
+show_actions = false
+

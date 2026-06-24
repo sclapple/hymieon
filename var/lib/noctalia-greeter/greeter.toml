@@ -1,0 +1,16 @@
+# noctalia-greeter greeter.toml
+# [session] default/last, [user] default, [appearance] scheme/password_style
+# [output] name/layout/scale, [cursor] theme/size/path, [keyboard] layout/variant/options
+[appearance]
+scheme = "Synced"
+
+[cursor]
+theme = "Bibata-Modern-Classic"
+
+[output]
+layout = "HDMI-A-1:0,0; DP-3:812,4"
+name = "DP-3"
+
+[session]
+default = "Hyprland"
+last = "Hyprland"
