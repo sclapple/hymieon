@@ -37,7 +37,7 @@ paru -S --needed --noconfirm \
     libva lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs \
     obs-studio mangohud lib32-mangohud goverlay gamescope \
     bluez bluez-utils lib32-libpulse pipewire pipewire-pulse pipewire-alsa linux-headers xwaylandvideobridge \
-    polychromatic openrazer-daemon transmission-gtk mpd mpc rmpc ttf-iosevka-nerd hyprsunset vesktop inotify-tools less \
+    transmission-gtk mpd mpc rmpc ttf-iosevka-nerd hyprsunset vesktop inotify-tools less \
     pamac-all networkmanager krabby-bin
 
 echo ":: Copying configuration files..."
@@ -59,7 +59,6 @@ sudo systemctl enable fstrim.timer 2>/dev/null || true
 sudo systemctl enable NetworkManager.service 2>/dev/null || true
 sudo systemctl enable bluetooth.service 2>/dev/null || true
 sudo systemctl enable cronie.service 2>/dev/null || true
-sudo modprobe razermouse 2>/dev/null || true
 sudo gpasswd -a "$USER_NAME" plugdev 2>/dev/null || true
 sudo systemctl enable --now lactd 2>/dev/null || true
 
