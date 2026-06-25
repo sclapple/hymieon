@@ -11,6 +11,12 @@
 
 1. `cd ~/hymieon && git push`
 
+## After first boot (in Hyprland)
+
+1. Remove `--` comment prefixes from `~/.config/hypr/monitors.lua` and `~/.config/hypr/workspaces.lua`
+2. Uncomment and set `[output]` in `/var/lib/noctalia-greeter/greeter.toml` for your monitors
+3. `hyprctl reload`
+
 ## If gaming extras was selected
 
 1. Log out and back in (group changes take effect)
