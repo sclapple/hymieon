@@ -120,6 +120,8 @@ sudo systemctl enable fstrim.timer 2>/dev/null || true
 sudo systemctl enable NetworkManager.service 2>/dev/null || true
 sudo systemctl enable bluetooth.service 2>/dev/null || true
 sudo systemctl enable cronie.service 2>/dev/null || true
+sudo useradd -r -s /usr/bin/nologin -d /var/lib/noctalia-greeter greeter 2>/dev/null || true
+sudo chown -R greeter:greeter /var/lib/noctalia-greeter 2>/dev/null || true
 sudo systemctl enable greetd.service 2>/dev/null || true
 sudo systemctl enable --now coolercontrold 2>/dev/null || true
 sudo gpasswd -a "$USER_NAME" plugdev 2>/dev/null || true
