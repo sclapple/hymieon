@@ -14,11 +14,11 @@ fi
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-echo ":: Installing yay..."
+echo ":: Installing paru..."
 sudo pacman -S --needed --noconfirm git base-devel
-git clone https://aur.archlinux.org/yay.git /tmp/yay
-(cd /tmp/yay && makepkg -si --noconfirm)
-rm -rf /tmp/yay
+git clone https://aur.archlinux.org/paru.git /tmp/paru
+(cd /tmp/paru && makepkg -si --noconfirm)
+rm -rf /tmp/paru
 
 echo ":: GPU drivers..."
 echo "1) AMD"
@@ -27,15 +27,15 @@ echo "0) Skip"
 read -rp "Select GPU drivers: " choice
 case "$choice" in
     1)
-        yay -S --noconfirm mesa vulkan-radeon
+        paru -S --noconfirm mesa vulkan-radeon
         ;;
     2)
-        yay -S --noconfirm nvidia nvidia-settings opencl-nvidia
+        paru -S --noconfirm nvidia nvidia-settings opencl-nvidia
         ;;
 esac
 
 echo ":: Installing packages..."
-yay -S --needed --noconfirm \
+paru -S --needed --noconfirm \
     base base-devel linux linux-headers amd-ucode \
     hyprland hyprcursor hyprshutdown hyprpwcenter xdg-desktop-portal-hyprland \
     efibootmgr zram-generator networkmanager \
@@ -47,7 +47,7 @@ yay -S --needed --noconfirm \
     fish kitty tmux starship fzf \
     bat fd ripgrep jq yazi \
     nano less fastfetch fisher \
-    neovim opencode \
+    neovim opencode nodejs-lts-iron \
     jre8-openjdk \
     chromium nautilus firefox \
     steam lutris wine \
@@ -79,7 +79,7 @@ echo ":: Optional extras..."
 read -rp "Install Jellyfin things? (jellyfin-tui, feishin, jellyfin-mpv-shim) [y/N] " answer
 case "${answer,,}" in
     y|yes)
-        yay -S --noconfirm feishin jellyfin-mpv-shim jellyfin-tui
+        paru -S --noconfirm feishin jellyfin-mpv-shim jellyfin-tui
         ;;
 esac
 
@@ -88,7 +88,7 @@ read -rp "Install gaming extras? (deadlock-modmanager-bin, hedgemodmanager-git, 
 case "${answer,,}" in
     y|yes)
         GAMING_EXTRAS=true
-        yay -S --noconfirm deadlock-modmanager-bin hedgemodmanager-git opentabletdriver osu-lazer-bin rewind-bin unleashedrecomp-bin upscayl
+        paru -S --noconfirm deadlock-modmanager-bin hedgemodmanager-git opentabletdriver osu-lazer-bin rewind-bin unleashedrecomp-bin upscayl
         echo ":: Applying audio latency tuning..."
         sudo tee /etc/security/limits.d/99-audio.conf > /dev/null <<'EOF'
 @audio   -   rtprio   95
