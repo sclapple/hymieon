@@ -54,7 +54,7 @@ install_main() {
         fish kitty tmux starship fzf \
         bat fd ripgrep jq yazi \
         nano less fastfetch fisher \
-        neovim opencode nodejs-lts-iron \
+        neovim opencode \
         jre8-openjdk \
         chromium nautilus firefox \
         steam lutris wine \
