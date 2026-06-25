@@ -78,7 +78,7 @@ install_main() {
         7zip \
         adw-gtk-theme-git appmanager bibata-cursor-theme \
         coolercontrol hyprshade keyguard \
-        lsfg-vk noctalia-git \
+        lsfg-vk noctalia-git noctalia-greeter-git \
         proton-ge-custom-bin scopebuddy spotify vesktop \
         vkbasalt zen-browser-bin
     echo -e "${GREEN}Main packages installed.${NC}"
