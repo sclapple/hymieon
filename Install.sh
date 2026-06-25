@@ -160,6 +160,9 @@ echo -e "${YELLOW}Install gaming extras? (deadlock-modmanager-bin, hedgemodmanag
 read -r gaming_response
 if [[ "$gaming_response" =~ ^[Yy]$ ]]; then
     GAMING_EXTRAS=true
+    echo -e "${YELLOW}Switching to nodejs-lts-iron for opentabletdriver...${NC}"
+    sudo pacman -Rdd nodejs --noconfirm 2>/dev/null || true
+    yay -S --noconfirm nodejs-lts-iron
     yay -S --noconfirm deadlock-modmanager-bin hedgemodmanager-git opentabletdriver osu-lazer-bin rewind-bin unleashedrecomp-bin upscayl
     echo -e "${YELLOW}Applying audio latency tuning...${NC}"
     sudo tee /etc/security/limits.d/99-audio.conf > /dev/null <<'EOF'
