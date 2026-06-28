@@ -102,6 +102,18 @@ copy_configs() {
     fi
 }
 
+ensure_xdg_dirs() {
+    echo -e "${YELLOW}Ensuring XDG user directories exist...${NC}"
+    if [ -f "$USER_HOME/.config/user-dirs.dirs" ]; then
+        grep -oP '^XDG_[A-Z_]+_DIR="\K[^"]+' "$USER_HOME/.config/user-dirs.dirs" | while read -r dir; do
+            expanded_dir=$(eval echo "$dir")
+            mkdir -p "$expanded_dir"
+        done
+    fi
+    mkdir -p "$USER_HOME/.local/share"
+    chown -R "$USER_NAME:$USER_NAME" "$USER_HOME/.config" "$USER_HOME/.local" 2>/dev/null || true
+}
+
 enable_services() {
     echo -e "${YELLOW}Enabling services...${NC}"
     sudo usermod -aG gamemode "$USER_NAME" 2>/dev/null || true
@@ -171,6 +183,7 @@ EOF
 fi
 
 copy_configs
+ensure_xdg_dirs
 enable_services
 set_shell
 
