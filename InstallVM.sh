@@ -16,33 +16,33 @@ USER_HOME="$(eval echo ~"$USER_NAME")"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 GAMING_EXTRAS=false
 
-install_yay() {
-    if ! command -v yay &> /dev/null; then
-        echo -e "${YELLOW}Installing yay-bin...${NC}"
+install_paru() {
+    if ! command -v paru &> /dev/null; then
+        echo -e "${YELLOW}Installing paru...${NC}"
         sudo pacman -S --needed --noconfirm git base-devel
-        git clone https://aur.archlinux.org/yay-bin.git /tmp/yay-bin
-        (cd /tmp/yay-bin && makepkg -si --noconfirm)
-        rm -rf /tmp/yay-bin
+        git clone https://aur.archlinux.org/paru.git /tmp/paru
+        (cd /tmp/paru && makepkg -si --noconfirm)
+        rm -rf /tmp/paru
     else
-        echo -e "${GREEN}yay is already installed.${NC}"
+        echo -e "${GREEN}paru is already installed.${NC}"
     fi
 }
 
 install_amd() {
     echo -e "${YELLOW}Installing AMD GPU drivers...${NC}"
-    yay -S --noconfirm mesa vulkan-radeon
+    paru -S --noconfirm mesa vulkan-radeon
     echo -e "${GREEN}AMD GPU drivers installed.${NC}"
 }
 
 install_nvidia() {
     echo -e "${YELLOW}Installing NVIDIA GPU drivers...${NC}"
-    yay -S --noconfirm nvidia nvidia-settings opencl-nvidia
+    paru -S --noconfirm nvidia nvidia-settings opencl-nvidia
     echo -e "${GREEN}NVIDIA GPU drivers installed.${NC}"
 }
 
 install_main() {
     echo -e "${YELLOW}Installing packages...${NC}"
-    yay -S --needed --noconfirm \
+    paru -S --needed --noconfirm \
         base base-devel linux linux-headers amd-ucode \
         hyprland hyprcursor hyprshutdown hyprpwcenter xdg-desktop-portal-hyprland \
         efibootmgr zram-generator networkmanager \
@@ -144,7 +144,7 @@ fi
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-install_yay
+install_paru
 
 echo -e "${YELLOW}Install AMD GPU drivers? (y/n)${NC}"
 read -r amd_response
@@ -163,7 +163,7 @@ install_main
 echo -e "${YELLOW}Install Jellyfin things? (feishin, jellyfin-mpv-shim, jellyfin-tui) (y/n)${NC}"
 read -r jellyfin_response
 if [[ "$jellyfin_response" =~ ^[Yy]$ ]]; then
-    yay -S --noconfirm feishin jellyfin-mpv-shim jellyfin-tui
+    paru -S --noconfirm feishin jellyfin-mpv-shim jellyfin-tui
 fi
 
 echo -e "${YELLOW}Install gaming extras? (deadlock-modmanager-bin, hedgemodmanager-git, opentabletdriver, osu-lazer-bin, rewind-bin, unleashedrecomp-bin, upscayl) (y/n)${NC}"
@@ -172,8 +172,8 @@ if [[ "$gaming_response" =~ ^[Yy]$ ]]; then
     GAMING_EXTRAS=true
     echo -e "${YELLOW}Switching to nodejs-lts-iron for opentabletdriver...${NC}"
     sudo pacman -Rdd nodejs --noconfirm 2>/dev/null || true
-    yay -S --noconfirm nodejs-lts-iron
-    yay -S --noconfirm deadlock-modmanager-bin hedgemodmanager-git opentabletdriver osu-lazer-bin rewind-bin unleashedrecomp-bin upscayl
+    paru -S --noconfirm nodejs-lts-iron
+    paru -S --noconfirm deadlock-modmanager-bin hedgemodmanager-git opentabletdriver osu-lazer-bin rewind-bin unleashedrecomp-bin upscayl
     echo -e "${YELLOW}Applying audio latency tuning...${NC}"
     sudo tee /etc/security/limits.d/99-audio.conf > /dev/null <<'EOF'
 @audio   -   rtprio   95
