@@ -1,0 +1,72 @@
+#!/bin/bash
+set -e
+
+REPO_DIR="$HOME/Projects/hymieon"
+
+cd "$REPO_DIR"
+
+echo "=== Syncing dotfiles into repo ==="
+
+sync_item() {
+    local src="$1"
+    local dst="$2"
+    local exclude="$3"
+    if [ -e "$src" ]; then
+        if [ -d "$src" ]; then
+            mkdir -p "$(dirname "$dst")"
+            if [ -n "$exclude" ]; then
+                rsync -a --delete --exclude="$exclude" "$src/" "$dst/"
+            else
+                rsync -a --delete "$src/" "$dst/"
+            fi
+        else
+            rsync -a "$src" "$dst"
+        fi
+    fi
+}
+
+echo "[.config]"
+git ls-files home/.config/ | sed 's|^home/\.config/||' | cut -d/ -f1 | sort -u | while read -r item; do
+    if [ "$item" = "hypr" ]; then
+        sync_item "$HOME/.config/$item" "$REPO_DIR/home/.config/$item" "temp"
+    else
+        sync_item "$HOME/.config/$item" "$REPO_DIR/home/.config/$item"
+    fi
+done
+
+echo "[.local]"
+git ls-files home/.local/ | sed 's|^home/\.local/||' | cut -d/ -f1 | sort -u | while read -r item; do
+    sync_item "$HOME/.local/$item" "$REPO_DIR/home/.local/$item"
+done
+
+echo "[Pictures/Wallpapers]"
+rsync -a "$HOME/Pictures/Wallpapers/" "$REPO_DIR/home/Pictures/Wallpapers/"
+
+echo "[Templates]"
+rsync -a "$HOME/Templates/" "$REPO_DIR/home/Templates/"
+
+rm -rf "$REPO_DIR/home/.config/hypr/temp" 2>/dev/null || true
+
+echo ""
+echo "=== Checking for changes ==="
+
+git add -A
+
+if git diff --cached --quiet; then
+    echo "No changes to sync."
+    exit 0
+fi
+
+CHANGED=$(git diff --cached --name-only)
+COUNT=$(echo "$CHANGED" | wc -l)
+
+if [ "$COUNT" -le 5 ]; then
+    MSG=$(echo "$CHANGED" | tr '\n' ' ' | sed 's/ $//')
+    git commit -m "sync: $MSG"
+else
+    CATS=$(echo "$CHANGED" | sed 's|home/\.config/||;s|home/\.local/||;s|home/Pictures/||;s|home/Templates/||' | cut -d/ -f1 | sort -u | tr '\n' ',' | sed 's/,$//')
+    git commit -m "sync: $COUNT files ($CATS)"
+fi
+
+git push
+echo "Done."
