@@ -120,7 +120,7 @@ hl.window_rule({
 })
 hl.window_rule({ match = { class = "(codium|codium-url-handler|VSCodium)", title = "negative:(.*codium.*|.*VSCodium.*)" }, float = true })
 hl.window_rule({ match = { class = "^(com.heroicgameslauncher.hgl)", title = "negative:(Heroic Games Launcher)" }, float = true })
-hl.window_rule({ match = { class = "^(OpenTabletDriver.UX)$" }, float = true, pin = true, size = "(monitor_w*0.4) (monitor_h*0.6)" })
+hl.window_rule({ match = { class = "^(OpenTabletDriver.UX)$" }, float = true, pin = true, size = "(monitor_w*0.4) (monitor_h*0.6)", focus_on_activate = true })
 
 hl.window_rule({ match = { class = "^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$" }, center = true })
 hl.window_rule({ match = { class = "^([Ww]hatsapp-for-linux|ZapZap|com.rtosta.zapzap)$" }, center = true })

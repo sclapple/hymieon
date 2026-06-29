@@ -1,3 +1,18 @@
 [plugins]
-enabled = []
+enabled = [ "damieon/keybind-parser" ]
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/sclapple/noctalia-binds-parser"
+    name = "keybinds-parser"
 

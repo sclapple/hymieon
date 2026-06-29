@@ -4,5 +4,5 @@ mode = "dark"
 
 [theme.templates]
 builtin_ids = [ "gtk3", "gtk4", "hyprland", "kcolorscheme", "starship", "kitty", "qt" ]
-community_ids = [ "spicetify", "zen-browser", "neovim", "discord", "papirus-icons", "yazi", "hyprtoolkit" ]
+community_ids = [ "spicetify", "zen-browser", "neovim", "discord", "papirus-icons", "hyprtoolkit" ]
 

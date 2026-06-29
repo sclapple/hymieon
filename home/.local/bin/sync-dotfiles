@@ -5,55 +5,112 @@ REPO_DIR="$HOME/Projects/hymieon"
 
 cd "$REPO_DIR"
 
-echo "=== Syncing dotfiles into repo ==="
+REF_FILE=$(mktemp)
+LAST_COMMIT_TS=$(git log -1 --format=%ct 2>/dev/null || echo "0")
+touch -d "@$LAST_COMMIT_TS" "$REF_FILE"
+trap 'rm -f "$REF_FILE"' EXIT
+
+echo "=== Checking for changes since last commit ==="
+
+has_changes_since() {
+    local path="$1"
+    if [ ! -e "$path" ]; then
+        return 1
+    fi
+    if [ -d "$path" ]; then
+        find "$path" -newer "$REF_FILE" ! -type d -print 2>/dev/null | head -1 | grep -q .
+    else
+        [ "$path" -nt "$REF_FILE" ]
+    fi
+}
+
+count_changed() {
+    local count=0
+    for item in "$@"; do
+        if has_changes_since "$HOME/.config/$item"; then
+            count=$((count + 1))
+        fi
+    done
+    echo "$count"
+}
 
 sync_item() {
     local src="$1"
     local dst="$2"
     local exclude="$3"
     if [ -e "$src" ]; then
+        mkdir -p "$(dirname "$dst")"
         if [ -d "$src" ]; then
-            mkdir -p "$(dirname "$dst")"
             if [ -n "$exclude" ]; then
-                rsync -a --delete --exclude="$exclude" "$src/" "$dst/"
+                rsync -a --delete --exclude="$exclude" --info=progress2 "$src/" "$dst/"
             else
-                rsync -a --delete "$src/" "$dst/"
+                rsync -a --delete --info=progress2 "$src/" "$dst/"
             fi
         else
-            rsync -a "$src" "$dst"
+            rsync -a --info=progress2 "$src" "$dst"
         fi
     fi
 }
 
-echo "[.config]"
-git ls-files home/.config/ | sed 's|^home/\.config/||' | cut -d/ -f1 | sort -u | while read -r item; do
-    if [ "$item" = "hypr" ]; then
-        sync_item "$HOME/.config/$item" "$REPO_DIR/home/.config/$item" "temp"
-    else
-        sync_item "$HOME/.config/$item" "$REPO_DIR/home/.config/$item"
-    fi
-done
+TOTAL_CHANGED=0
+
+CONFIG_ITEMS=($(git ls-files home/.config/ | sed 's|^home/\.config/||' | cut -d/ -f1 | sort -u))
+CONFIG_CHANGED=$(count_changed "${CONFIG_ITEMS[@]}")
+TOTAL_CHANGED=$((TOTAL_CHANGED + CONFIG_CHANGED))
+
+echo "[.config] $CONFIG_CHANGED of ${#CONFIG_ITEMS[@]} items changed"
+if [ "$CONFIG_CHANGED" -gt 0 ]; then
+    idx=0
+    for item in "${CONFIG_ITEMS[@]}"; do
+        src="$HOME/.config/$item"
+        if has_changes_since "$src"; then
+            idx=$((idx + 1))
+            echo "  [$idx/$CONFIG_CHANGED] $item..."
+            if [ "$item" = "hypr" ]; then
+                sync_item "$src" "$REPO_DIR/home/.config/$item" "temp"
+            else
+                sync_item "$src" "$REPO_DIR/home/.config/$item"
+            fi
+        fi
+    done
+fi
 
 echo "[.local]"
-git ls-files home/.local/ | sed 's|^home/\.local/||' | cut -d/ -f1 | sort -u | while read -r item; do
-    sync_item "$HOME/.local/$item" "$REPO_DIR/home/.local/$item"
-done
+if has_changes_since "$HOME/.local/bin"; then
+    TOTAL_CHANGED=$((TOTAL_CHANGED + 1))
+    echo "  [1/1] bin..."
+    sync_item "$HOME/.local/bin" "$REPO_DIR/home/.local/bin"
+else
+    echo "  no changes"
+fi
 
 echo "[Pictures/Wallpapers]"
-rsync -a "$HOME/Pictures/Wallpapers/" "$REPO_DIR/home/Pictures/Wallpapers/"
+if has_changes_since "$HOME/Pictures/Wallpapers"; then
+    TOTAL_CHANGED=$((TOTAL_CHANGED + 1))
+    echo "  syncing Wallpapers..."
+    rsync -a --info=progress2 "$HOME/Pictures/Wallpapers/" "$REPO_DIR/home/Pictures/Wallpapers/"
+else
+    echo "  no changes"
+fi
 
 echo "[Templates]"
-rsync -a "$HOME/Templates/" "$REPO_DIR/home/Templates/"
+if has_changes_since "$HOME/Templates"; then
+    TOTAL_CHANGED=$((TOTAL_CHANGED + 1))
+    echo "  syncing Templates..."
+    rsync -a --info=progress2 "$HOME/Templates/" "$REPO_DIR/home/Templates/"
+else
+    echo "  no changes"
+fi
 
 rm -rf "$REPO_DIR/home/.config/hypr/temp" 2>/dev/null || true
 
 echo ""
-echo "=== Checking for changes ==="
+echo "=== Committing ==="
 
 git add -A
 
 if git diff --cached --quiet; then
-    echo "No changes to sync."
+    echo "Nothing to sync."
     exit 0
 fi
 

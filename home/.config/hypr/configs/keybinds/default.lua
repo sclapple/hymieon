@@ -8,7 +8,6 @@ hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(Apps.password), { desc = "Open defaul
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(Apps.music), { desc = "Open music player" })
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(Apps.task_manager), { desc = "Open system monitor" })
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(Apps.im), { desc = "Open Discord client" })
-hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("kitty --class viu -- viu-media"), { desc = "Open anime viewer" })
 hl.bind(mainMod .. " + ALT + S", hl.dsp.exec_cmd("lutris"), { desc = "Open game launcher" })
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("kitty --class yazi-configs -- yazi .config/hypr/"), { desc = "Browse config files" })
 
@@ -16,8 +15,8 @@ hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("kitty --class yazi-configs -
 hl.bind(mainMod .. " + SHIFT + G", toggle_gamemode, { desc = "Toggle gamemode" })
 
 -- window management
-hl.bind(mainMod .. " + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd(scriptsDir .. "/KillActiveProcess.sh"), { desc = "Force kill active window" })
+hl.bind(mainMod .. " + Q", hl.dsp.window.close(), { desc = "Close active window" })
+hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.window.kill(), { desc = "Kill active window" })
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen_state({ internal = "1", client = "0", action = "toggle" }), { desc = "Toggle Maximized window" })
 hl.bind(mainMod .. " + ALT + F", hl.dsp.window.fullscreen_state({ internal = "0", client = "2", action = "toggle" }), { desc = "Toggle 'fake' fullscreen" })
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen_state({ internal = "2", client = "2", action = "toggle" }), { desc = "Toggle fullscreen window" })
@@ -34,6 +33,7 @@ hl.bind(mainMod .. " + ALT + B", hl.dsp.exec_cmd("noctalia msg bar-toggle"), { d
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("noctalia msg screenshot-region"), { desc = "Screenshot" })
 hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("kitty --class yazi-configs -- yazi .config/noctalia/"), { desc = "Browse noctalia configs" })
 hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd("noctalia msg settings-toggle"), { desc = "Toggle Noctalia settings" })
+hl.bind(mainMod .. " + ALT + K", hl.dsp.exec_cmd('noctalia msg panel-toggle launcher "/binds"'), { desc = "Keybind browser" })
 
 -- workspaces
 hl.bind("ALT + SHIFT + TAB", hl.dsp.focus({ workspace = "previous" }), { desc = "Swap to last workspace" })

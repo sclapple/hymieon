@@ -21,8 +21,16 @@ local function restore_desktop_keys()
 	hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(Apps.im), { desc = "Open Discord client" })
 	hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("kitty --class viu -- viu-media"), { desc = "Open anime viewer" })
 	hl.bind(mainMod .. " + ALT + S", hl.dsp.exec_cmd("lutris"), { desc = "Open game launcher" })
-	hl.bind(mainMod .. " + ALT + F", hl.dsp.window.fullscreen_state({ internal = "0", client = "2", action = "toggle" }), { desc = "Toggle 'fake' fullscreen" })
-	hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd("noctalia msg settings-toggle"), { desc = "Toggle Noctalia settings" })
+	hl.bind(
+		mainMod .. " + ALT + F",
+		hl.dsp.window.fullscreen_state({ internal = "0", client = "2", action = "toggle" }),
+		{ desc = "Toggle 'fake' fullscreen" }
+	)
+	hl.bind(
+		mainMod .. " + SHIFT + O",
+		hl.dsp.exec_cmd("noctalia msg settings-toggle"),
+		{ desc = "Toggle Noctalia settings" }
+	)
 	hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("noctalia msg panel-toggle session"), { desc = "Power menu" })
 end
 
@@ -38,31 +46,51 @@ function M.enter()
 	hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }), { desc = "True fullscreen" })
 
 	hl.unbind(mainMod .. " + SHIFT + S")
-	hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(scriptsDir .. "/ScreenShot.sh --area"), { desc = "Screenshot selected area" })
+	hl.bind(
+		mainMod .. " + SHIFT + S",
+		hl.dsp.exec_cmd(scriptsDir .. "/ScreenShot.sh --area"),
+		{ desc = "Screenshot selected area" }
+	)
 
 	hl.unbind(mainMod .. " + O")
-	hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("opentabletdriver-gui"), { desc = "Open tablet driver GUI" })
+	hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("otd-gui"), { desc = "Open tablet driver GUI" })
 
 	hl.unbind(mainMod .. " + ALT + P")
 	hl.bind(mainMod .. " + ALT + P", hl.dsp.exec_cmd("noctalia msg panel-toggle session"), { desc = "Power menu" })
 
-	hl.bind(mainMod .. " + CTRL + ALT + P", hl.dsp.exec_cmd(scriptsDir .. "/monitorOnOff.sh"), { desc = "Toggle monitor on/off" })
+	hl.bind(
+		mainMod .. " + CTRL + ALT + P",
+		hl.dsp.exec_cmd(scriptsDir .. "/monitorOnOff.sh"),
+		{ desc = "Toggle monitor on/off" }
+	)
 end
 
 function M.exit()
 	hl.unbind(mainMod .. " + CTRL + ALT + P")
 
 	hl.unbind(mainMod .. " + F")
-	hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen_state({ internal = "1", client = "0", action = "toggle" }), { desc = "Toggle Maximized window" })
+	hl.bind(
+		mainMod .. " + F",
+		hl.dsp.window.fullscreen_state({ internal = "1", client = "0", action = "toggle" }),
+		{ desc = "Toggle Maximized window" }
+	)
 
 	hl.unbind(mainMod .. " + SHIFT + F")
-	hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen_state({ internal = "2", client = "2", action = "toggle" }), { desc = "Toggle fullscreen window" })
+	hl.bind(
+		mainMod .. " + SHIFT + F",
+		hl.dsp.window.fullscreen_state({ internal = "2", client = "2", action = "toggle" }),
+		{ desc = "Toggle fullscreen window" }
+	)
 
 	hl.unbind(mainMod .. " + SHIFT + S")
 	hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("noctalia msg screenshot-region"), { desc = "Screenshot" })
 
 	hl.unbind(mainMod .. " + O")
-	hl.bind(mainMod .. " + O", hl.dsp.window.set_prop({ prop = "opaque", value = "toggle" }), { desc = "Toggle active window opacity" })
+	hl.bind(
+		mainMod .. " + O",
+		hl.dsp.window.set_prop({ prop = "opaque", value = "toggle" }),
+		{ desc = "Toggle active window opacity" }
+	)
 
 	hl.unbind(mainMod .. " + ALT + P")
 	hl.bind(mainMod .. " + ALT + P", hl.dsp.window.pin({ value = "toggle" }), { desc = "Toggle active window pinning" })

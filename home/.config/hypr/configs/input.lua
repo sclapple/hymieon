@@ -14,7 +14,7 @@ hl.config({
 		follow_mouse = 2,
 		float_switch_override_focus = 1,
 		numlock_by_default = true,
-		focus_on_close = 0,
+		focus_on_close = 2,
 		touchpad = {
 			natural_scroll = true,
 			disable_while_typing = true,

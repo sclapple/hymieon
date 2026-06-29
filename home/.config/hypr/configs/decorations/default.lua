@@ -1,29 +1,30 @@
 hl.config({
 	general = {
-		border_size = 2,
+		border_size = 1,
 		gaps_in = 5,
 		gaps_out = 10,
 	},
 	decoration = {
-		rounding = 20,
-		rounding_power = 2,
+		rounding = 18,
+		rounding_power = 4,
 		active_opacity = 0.82,
 		inactive_opacity = 0.67,
 		fullscreen_opacity = 1.0,
-		dim_inactive = false,
+		dim_inactive = true,
 		dim_strength = 0.3,
 		dim_special = 0.8,
 		shadow = {
 			enabled = true,
-			range = 4,
-			render_power = 3,
+			range = 20,
+			render_power = 4,
 			color = 0xee1a1a1a,
 		},
 		blur = {
 			enabled = true,
-			size = 3,
-			passes = 2,
+			size = 6,
+			passes = 3,
 			vibrancy = 0.1696,
+			popups = true,
 		},
 	},
 })

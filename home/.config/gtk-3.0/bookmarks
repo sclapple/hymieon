@@ -1,5 +1,6 @@
-file://__HOME__/Documents Documents
-file://__HOME__/Downloads Downloads
-file://__HOME__/Pictures Pictures
-file://__HOME__/Templates Templates
-file://__HOME__/Videos Videos
+file:///home/damieon/Documents Documents
+file:///home/damieon/Downloads Downloads
+file:///home/damieon/Pictures Pictures
+file:///home/damieon/Templates Templates
+file:///home/damieon/Videos Videos
+smb://192.168.1.225/media/ media on 192.168.1.225

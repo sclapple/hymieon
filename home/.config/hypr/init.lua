@@ -1,7 +1,7 @@
 -- Wiki: https://wiki.hypr.land/Configuring/Basics/Autostart/
 hl.on("hyprland.start", function()
 	-- xdg-portal variables
-	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP DISPLAY=''")
 	-- start noctalia
 	hl.exec_cmd("noctalia")
 	-- start persistent clipboard

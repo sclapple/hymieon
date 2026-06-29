@@ -6,6 +6,8 @@ hl.config({
 		layout = "dwindle",
 		snap = {
 			enabled = true,
+			border_overlap = false,
+			respect_gaps = true,
 		},
 	},
 
@@ -50,6 +52,7 @@ hl.config({
 		workspace_back_and_forth = true,
 		allow_workspace_cycles = true,
 		pass_mouse_when_bound = false,
+		allow_pin_fullscreen = true,
 	},
 
 	xwayland = {

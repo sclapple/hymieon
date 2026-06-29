@@ -10,3 +10,7 @@ theme = "Bibata-Modern-Classic"
 [session]
 default = "Hyprland"
 last = "Hyprland"
+
+# [output]
+# layout = "HDMI-A-1:0,0; DP-3:810,0"
+# name = "DP-3"

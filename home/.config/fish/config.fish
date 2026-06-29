@@ -5,10 +5,10 @@ if status is-interactive
 end
 
 # uv
-fish_add_path "$HOME/.local/bin"
+fish_add_path "/home/damieon/.local/bin"
 
 # pnpm
-set -gx PNPM_HOME "$HOME/.local/share/pnpm"
+set -gx PNPM_HOME "/home/damieon/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
@@ -31,9 +31,9 @@ bind \cu kill-line # Ctrl+u → delete from cursor to end
 # Autosuggestion
 bind \cf accept-autosuggestion # Ctrl+f → accept suggestion
 
-fish_add_path "$HOME/.spicetify"
+fish_add_path /home/damieon/.spicetify
 
 # opencode
-fish_add_path "$HOME/.opencode/bin"
+fish_add_path /home/damieon/.opencode/bin
 
 starship init fish | source
