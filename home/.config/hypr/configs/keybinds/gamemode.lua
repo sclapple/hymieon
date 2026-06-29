@@ -15,12 +15,24 @@ local function hide_desktop_keys()
 end
 
 local function restore_desktop_keys()
-	hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(Apps.password), { desc = "Open default password manager" })
-	hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(Apps.music), { desc = "Open music player" })
-	hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(Apps.task_manager), { desc = "Open system monitor" })
-	hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(Apps.im), { desc = "Open Discord client" })
-	hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("kitty --class viu -- viu-media"), { desc = "Open anime viewer" })
-	hl.bind(mainMod .. " + ALT + S", hl.dsp.exec_cmd("lutris"), { desc = "Open game launcher" })
+	hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(Apps.password), {
+		desc = "Open default password manager",
+	})
+	hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(Apps.music), {
+		desc = "Open music player",
+	})
+	hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(Apps.task_manager), {
+		desc = "Open system monitor",
+	})
+	hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(Apps.im), {
+		desc = "Open Discord client",
+	})
+	hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("kitty --class viu -- viu-media"), {
+		desc = "Open anime viewer",
+	})
+	hl.bind(mainMod .. " + ALT + S", hl.dsp.exec_cmd("lutris"), {
+		desc = "Open game launcher",
+	})
 	hl.bind(
 		mainMod .. " + ALT + F",
 		hl.dsp.window.fullscreen_state({ internal = "0", client = "2", action = "toggle" }),
@@ -31,7 +43,9 @@ local function restore_desktop_keys()
 		hl.dsp.exec_cmd("noctalia msg settings-toggle"),
 		{ desc = "Toggle Noctalia settings" }
 	)
-	hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("noctalia msg panel-toggle session"), { desc = "Power menu" })
+	hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("noctalia msg panel-toggle session"), {
+		desc = "Power menu",
+	})
 end
 
 local M = {}
@@ -40,10 +54,14 @@ function M.enter()
 	hide_desktop_keys()
 
 	hl.unbind(mainMod .. " + F")
-	hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized" }), { desc = "Fake fullscreen" })
+	hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized" }), {
+		desc = "Fake fullscreen",
+	})
 
 	hl.unbind(mainMod .. " + SHIFT + F")
-	hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }), { desc = "True fullscreen" })
+	hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }), {
+		desc = "True fullscreen",
+	})
 
 	hl.unbind(mainMod .. " + SHIFT + S")
 	hl.bind(
@@ -53,10 +71,14 @@ function M.enter()
 	)
 
 	hl.unbind(mainMod .. " + O")
-	hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("otd-gui"), { desc = "Open tablet driver GUI" })
+	hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("otd-gui"), {
+		desc = "Open tablet driver GUI",
+	})
 
 	hl.unbind(mainMod .. " + ALT + P")
-	hl.bind(mainMod .. " + ALT + P", hl.dsp.exec_cmd("noctalia msg panel-toggle session"), { desc = "Power menu" })
+	hl.bind(mainMod .. " + ALT + P", hl.dsp.exec_cmd("noctalia msg panel-toggle session"), {
+		desc = "Power menu",
+	})
 
 	hl.bind(
 		mainMod .. " + CTRL + ALT + P",
@@ -83,17 +105,21 @@ function M.exit()
 	)
 
 	hl.unbind(mainMod .. " + SHIFT + S")
-	hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("noctalia msg screenshot-region"), { desc = "Screenshot" })
+	hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("noctalia msg screenshot-region"), {
+		desc = "Screenshot",
+	})
 
 	hl.unbind(mainMod .. " + O")
-	hl.bind(
-		mainMod .. " + O",
-		hl.dsp.window.set_prop({ prop = "opaque", value = "toggle" }),
-		{ desc = "Toggle active window opacity" }
-	)
+	hl.bind(mainMod .. " + O", function()
+		hl.dispatch(hl.dsp.window.set_prop({ prop = "opaque", value = "toggle" }))
+		local dimmed = hl.get_config("decoration.dim_inactive")
+		hl.config({ decoration = { dim_inactive = not dimmed } })
+	end, { desc = "Toggle window opaque & dimming" })
 
 	hl.unbind(mainMod .. " + ALT + P")
-	hl.bind(mainMod .. " + ALT + P", hl.dsp.window.pin({ value = "toggle" }), { desc = "Toggle active window pinning" })
+	hl.bind(mainMod .. " + ALT + P", hl.dsp.window.pin({ value = "toggle" }), {
+		desc = "Toggle active window pinning",
+	})
 
 	restore_desktop_keys()
 end

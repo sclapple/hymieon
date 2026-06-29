@@ -5,8 +5,8 @@ hl.config({
 		gaps_out = 10,
 	},
 	decoration = {
-		rounding = 18,
-		rounding_power = 4,
+		rounding = 20,
+		rounding_power = 3,
 		active_opacity = 0.82,
 		inactive_opacity = 0.67,
 		fullscreen_opacity = 1.0,
